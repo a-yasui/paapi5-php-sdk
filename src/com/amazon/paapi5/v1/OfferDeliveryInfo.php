@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferDeliveryInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferDeliveryInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         'isAmazonFulfilled' => 'bool',
         'isFreeShippingEligible' => 'bool',
         'isPrimeEligible' => 'bool',
-        'shippingCharges' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferShippingCharge[]'
+        'shippingCharges' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferShippingCharge[]',
     ];
 
     /**
@@ -59,7 +59,7 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         'isAmazonFulfilled' => null,
         'isFreeShippingEligible' => null,
         'isPrimeEligible' => null,
-        'shippingCharges' => null
+        'shippingCharges' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         'isAmazonFulfilled' => 'IsAmazonFulfilled',
         'isFreeShippingEligible' => 'IsFreeShippingEligible',
         'isPrimeEligible' => 'IsPrimeEligible',
-        'shippingCharges' => 'ShippingCharges'
+        'shippingCharges' => 'ShippingCharges',
     ];
 
     /**
@@ -104,7 +104,7 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         'isAmazonFulfilled' => 'setIsAmazonFulfilled',
         'isFreeShippingEligible' => 'setIsFreeShippingEligible',
         'isPrimeEligible' => 'setIsPrimeEligible',
-        'shippingCharges' => 'setShippingCharges'
+        'shippingCharges' => 'setShippingCharges',
     ];
 
     /**
@@ -116,7 +116,7 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         'isAmazonFulfilled' => 'getIsAmazonFulfilled',
         'isFreeShippingEligible' => 'getIsFreeShippingEligible',
         'isPrimeEligible' => 'getIsPrimeEligible',
-        'shippingCharges' => 'getShippingCharges'
+        'shippingCharges' => 'getShippingCharges',
     ];
 
     /**
@@ -160,9 +160,9 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['isAmazonFulfilled'] = isset($data['isAmazonFulfilled']) ? $data['isAmazonFulfilled'] : null;
-        $this->container['isFreeShippingEligible'] = isset($data['isFreeShippingEligible']) ? $data['isFreeShippingEligible'] : null;
-        $this->container['isPrimeEligible'] = isset($data['isPrimeEligible']) ? $data['isPrimeEligible'] : null;
-        $this->container['shippingCharges'] = isset($data['shippingCharges']) ? $data['shippingCharges'] : null;
+        $this->container['isAmazonFulfilled'] = $data['isAmazonFulfilled'] ?? null;
+        $this->container['isFreeShippingEligible'] = $data['isFreeShippingEligible'] ?? null;
+        $this->container['isPrimeEligible'] = $data['isPrimeEligible'] ?? null;
+        $this->container['shippingCharges'] = $data['shippingCharges'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class OfferDeliveryInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

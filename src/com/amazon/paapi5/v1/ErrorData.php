@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ErrorData Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ErrorData implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class ErrorData implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'string',
-        'message' => 'string'
+        'message' => 'string',
     ];
 
     /**
@@ -55,7 +55,7 @@ class ErrorData implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'code' => null,
-        'message' => null
+        'message' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class ErrorData implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'code' => 'Code',
-        'message' => 'Message'
+        'message' => 'Message',
     ];
 
     /**
@@ -96,7 +96,7 @@ class ErrorData implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'code' => 'setCode',
-        'message' => 'setMessage'
+        'message' => 'setMessage',
     ];
 
     /**
@@ -106,7 +106,7 @@ class ErrorData implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'code' => 'getCode',
-        'message' => 'getMessage'
+        'message' => 'getMessage',
     ];
 
     /**
@@ -150,9 +150,9 @@ class ErrorData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class ErrorData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['code'] = $data['code'] ?? null;
+        $this->container['message'] = $data['message'] ?? null;
     }
 
     /**
@@ -267,7 +267,7 @@ class ErrorData implements ModelInterface, ArrayAccess
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -318,5 +318,3 @@ class ErrorData implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

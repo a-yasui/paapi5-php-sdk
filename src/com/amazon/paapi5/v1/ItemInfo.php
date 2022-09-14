@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ItemInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ItemInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -54,7 +54,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
         'productInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ProductInfo',
         'technicalInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TechnicalInfo',
         'title' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
-        'tradeInInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TradeInInfo'
+        'tradeInInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TradeInInfo',
     ];
 
     /**
@@ -73,7 +73,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
         'productInfo' => null,
         'technicalInfo' => null,
         'title' => null,
-        'tradeInInfo' => null
+        'tradeInInfo' => null,
     ];
 
     /**
@@ -113,7 +113,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
         'productInfo' => 'ProductInfo',
         'technicalInfo' => 'TechnicalInfo',
         'title' => 'Title',
-        'tradeInInfo' => 'TradeInInfo'
+        'tradeInInfo' => 'TradeInInfo',
     ];
 
     /**
@@ -132,7 +132,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
         'productInfo' => 'setProductInfo',
         'technicalInfo' => 'setTechnicalInfo',
         'title' => 'setTitle',
-        'tradeInInfo' => 'setTradeInInfo'
+        'tradeInInfo' => 'setTradeInInfo',
     ];
 
     /**
@@ -151,7 +151,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
         'productInfo' => 'getProductInfo',
         'technicalInfo' => 'getTechnicalInfo',
         'title' => 'getTitle',
-        'tradeInInfo' => 'getTradeInInfo'
+        'tradeInInfo' => 'getTradeInInfo',
     ];
 
     /**
@@ -195,9 +195,9 @@ class ItemInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -214,17 +214,17 @@ class ItemInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['byLineInfo'] = isset($data['byLineInfo']) ? $data['byLineInfo'] : null;
-        $this->container['classifications'] = isset($data['classifications']) ? $data['classifications'] : null;
-        $this->container['contentInfo'] = isset($data['contentInfo']) ? $data['contentInfo'] : null;
-        $this->container['contentRating'] = isset($data['contentRating']) ? $data['contentRating'] : null;
-        $this->container['externalIds'] = isset($data['externalIds']) ? $data['externalIds'] : null;
-        $this->container['features'] = isset($data['features']) ? $data['features'] : null;
-        $this->container['manufactureInfo'] = isset($data['manufactureInfo']) ? $data['manufactureInfo'] : null;
-        $this->container['productInfo'] = isset($data['productInfo']) ? $data['productInfo'] : null;
-        $this->container['technicalInfo'] = isset($data['technicalInfo']) ? $data['technicalInfo'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
-        $this->container['tradeInInfo'] = isset($data['tradeInInfo']) ? $data['tradeInInfo'] : null;
+        $this->container['byLineInfo'] = $data['byLineInfo'] ?? null;
+        $this->container['classifications'] = $data['classifications'] ?? null;
+        $this->container['contentInfo'] = $data['contentInfo'] ?? null;
+        $this->container['contentRating'] = $data['contentRating'] ?? null;
+        $this->container['externalIds'] = $data['externalIds'] ?? null;
+        $this->container['features'] = $data['features'] ?? null;
+        $this->container['manufactureInfo'] = $data['manufactureInfo'] ?? null;
+        $this->container['productInfo'] = $data['productInfo'] ?? null;
+        $this->container['technicalInfo'] = $data['technicalInfo'] ?? null;
+        $this->container['title'] = $data['title'] ?? null;
+        $this->container['tradeInInfo'] = $data['tradeInInfo'] ?? null;
     }
 
     /**
@@ -535,7 +535,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -584,5 +584,3 @@ class ItemInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

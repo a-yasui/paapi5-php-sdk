@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ContentRating Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ContentRating implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -44,7 +44,7 @@ class ContentRating implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'audienceRating' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute'
+        'audienceRating' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
     ];
 
     /**
@@ -53,7 +53,7 @@ class ContentRating implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'audienceRating' => null
+        'audienceRating' => null,
     ];
 
     /**
@@ -83,7 +83,7 @@ class ContentRating implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'audienceRating' => 'AudienceRating'
+        'audienceRating' => 'AudienceRating',
     ];
 
     /**
@@ -92,7 +92,7 @@ class ContentRating implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'audienceRating' => 'setAudienceRating'
+        'audienceRating' => 'setAudienceRating',
     ];
 
     /**
@@ -101,7 +101,7 @@ class ContentRating implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'audienceRating' => 'getAudienceRating'
+        'audienceRating' => 'getAudienceRating',
     ];
 
     /**
@@ -145,9 +145,9 @@ class ContentRating implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -164,7 +164,7 @@ class ContentRating implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['audienceRating'] = isset($data['audienceRating']) ? $data['audienceRating'] : null;
+        $this->container['audienceRating'] = $data['audienceRating'] ?? null;
     }
 
     /**
@@ -235,7 +235,7 @@ class ContentRating implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -284,5 +284,3 @@ class ContentRating implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

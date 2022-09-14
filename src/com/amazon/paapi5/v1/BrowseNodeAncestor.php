@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * BrowseNodeAncestor Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class BrowseNodeAncestor implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         'ancestor' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\BrowseNodeAncestor',
         'contextFreeName' => 'string',
         'displayName' => 'string',
-        'id' => 'string'
+        'id' => 'string',
     ];
 
     /**
@@ -59,7 +59,7 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         'ancestor' => null,
         'contextFreeName' => null,
         'displayName' => null,
-        'id' => null
+        'id' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         'ancestor' => 'Ancestor',
         'contextFreeName' => 'ContextFreeName',
         'displayName' => 'DisplayName',
-        'id' => 'Id'
+        'id' => 'Id',
     ];
 
     /**
@@ -104,7 +104,7 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         'ancestor' => 'setAncestor',
         'contextFreeName' => 'setContextFreeName',
         'displayName' => 'setDisplayName',
-        'id' => 'setId'
+        'id' => 'setId',
     ];
 
     /**
@@ -116,7 +116,7 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         'ancestor' => 'getAncestor',
         'contextFreeName' => 'getContextFreeName',
         'displayName' => 'getDisplayName',
-        'id' => 'getId'
+        'id' => 'getId',
     ];
 
     /**
@@ -160,9 +160,9 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ancestor'] = isset($data['ancestor']) ? $data['ancestor'] : null;
-        $this->container['contextFreeName'] = isset($data['contextFreeName']) ? $data['contextFreeName'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['ancestor'] = $data['ancestor'] ?? null;
+        $this->container['contextFreeName'] = $data['contextFreeName'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class BrowseNodeAncestor implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

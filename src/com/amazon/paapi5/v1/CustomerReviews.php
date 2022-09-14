@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * CustomerReviews Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class CustomerReviews implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class CustomerReviews implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'count' => 'int',
-        'starRating' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Rating'
+        'starRating' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Rating',
     ];
 
     /**
@@ -55,7 +55,7 @@ class CustomerReviews implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'count' => 'int32',
-        'starRating' => null
+        'starRating' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class CustomerReviews implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'count' => 'Count',
-        'starRating' => 'StarRating'
+        'starRating' => 'StarRating',
     ];
 
     /**
@@ -96,7 +96,7 @@ class CustomerReviews implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'count' => 'setCount',
-        'starRating' => 'setStarRating'
+        'starRating' => 'setStarRating',
     ];
 
     /**
@@ -106,7 +106,7 @@ class CustomerReviews implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'count' => 'getCount',
-        'starRating' => 'getStarRating'
+        'starRating' => 'getStarRating',
     ];
 
     /**
@@ -150,9 +150,9 @@ class CustomerReviews implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class CustomerReviews implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['starRating'] = isset($data['starRating']) ? $data['starRating'] : null;
+        $this->container['count'] = $data['count'] ?? null;
+        $this->container['starRating'] = $data['starRating'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class CustomerReviews implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class CustomerReviews implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

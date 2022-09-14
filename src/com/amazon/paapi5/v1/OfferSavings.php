@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferSavings Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferSavings implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -48,7 +48,7 @@ class OfferSavings implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'displayAmount' => 'string',
         'percentage' => 'int',
-        'pricePerUnit' => 'float'
+        'pricePerUnit' => 'float',
     ];
 
     /**
@@ -61,7 +61,7 @@ class OfferSavings implements ModelInterface, ArrayAccess
         'currency' => null,
         'displayAmount' => null,
         'percentage' => 'int32',
-        'pricePerUnit' => null
+        'pricePerUnit' => null,
     ];
 
     /**
@@ -95,7 +95,7 @@ class OfferSavings implements ModelInterface, ArrayAccess
         'currency' => 'Currency',
         'displayAmount' => 'DisplayAmount',
         'percentage' => 'Percentage',
-        'pricePerUnit' => 'PricePerUnit'
+        'pricePerUnit' => 'PricePerUnit',
     ];
 
     /**
@@ -108,7 +108,7 @@ class OfferSavings implements ModelInterface, ArrayAccess
         'currency' => 'setCurrency',
         'displayAmount' => 'setDisplayAmount',
         'percentage' => 'setPercentage',
-        'pricePerUnit' => 'setPricePerUnit'
+        'pricePerUnit' => 'setPricePerUnit',
     ];
 
     /**
@@ -121,7 +121,7 @@ class OfferSavings implements ModelInterface, ArrayAccess
         'currency' => 'getCurrency',
         'displayAmount' => 'getDisplayAmount',
         'percentage' => 'getPercentage',
-        'pricePerUnit' => 'getPricePerUnit'
+        'pricePerUnit' => 'getPricePerUnit',
     ];
 
     /**
@@ -165,9 +165,9 @@ class OfferSavings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -184,11 +184,11 @@ class OfferSavings implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['displayAmount'] = isset($data['displayAmount']) ? $data['displayAmount'] : null;
-        $this->container['percentage'] = isset($data['percentage']) ? $data['percentage'] : null;
-        $this->container['pricePerUnit'] = isset($data['pricePerUnit']) ? $data['pricePerUnit'] : null;
+        $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['displayAmount'] = $data['displayAmount'] ?? null;
+        $this->container['percentage'] = $data['percentage'] ?? null;
+        $this->container['pricePerUnit'] = $data['pricePerUnit'] ?? null;
     }
 
     /**
@@ -355,7 +355,7 @@ class OfferSavings implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -404,5 +404,3 @@ class OfferSavings implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

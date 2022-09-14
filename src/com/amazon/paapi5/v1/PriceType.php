@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * PriceType Class Doc Comment
@@ -30,10 +31,10 @@ class PriceType
     /**
      * Possible values of this enum
      */
-    const LIST_PRICE = 'LIST_PRICE';
-    const LOWEST_PRICE = 'LOWEST_PRICE';
-    const LOWEST_PRICE_STRIKETHROUGH = 'LOWEST_PRICE_STRIKETHROUGH';
-    const WAS_PRICE = 'WAS_PRICE';
+    public const LIST_PRICE = 'LIST_PRICE';
+    public const LOWEST_PRICE = 'LOWEST_PRICE';
+    public const LOWEST_PRICE_STRIKETHROUGH = 'LOWEST_PRICE_STRIKETHROUGH';
+    public const WAS_PRICE = 'WAS_PRICE';
 
     /**
      * Gets allowable values of the enum
@@ -49,5 +50,3 @@ class PriceType
         ];
     }
 }
-
-

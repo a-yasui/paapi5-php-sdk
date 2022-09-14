@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferListing Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferListing implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -55,7 +55,7 @@ class OfferListing implements ModelInterface, ArrayAccess
         'programEligibility' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferProgramEligibility',
         'promotions' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPromotion[]',
         'savingBasis' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice',
-        'violatesMAP' => 'bool'
+        'violatesMAP' => 'bool',
     ];
 
     /**
@@ -75,7 +75,7 @@ class OfferListing implements ModelInterface, ArrayAccess
         'programEligibility' => null,
         'promotions' => null,
         'savingBasis' => null,
-        'violatesMAP' => null
+        'violatesMAP' => null,
     ];
 
     /**
@@ -116,7 +116,7 @@ class OfferListing implements ModelInterface, ArrayAccess
         'programEligibility' => 'ProgramEligibility',
         'promotions' => 'Promotions',
         'savingBasis' => 'SavingBasis',
-        'violatesMAP' => 'ViolatesMAP'
+        'violatesMAP' => 'ViolatesMAP',
     ];
 
     /**
@@ -136,7 +136,7 @@ class OfferListing implements ModelInterface, ArrayAccess
         'programEligibility' => 'setProgramEligibility',
         'promotions' => 'setPromotions',
         'savingBasis' => 'setSavingBasis',
-        'violatesMAP' => 'setViolatesMAP'
+        'violatesMAP' => 'setViolatesMAP',
     ];
 
     /**
@@ -156,7 +156,7 @@ class OfferListing implements ModelInterface, ArrayAccess
         'programEligibility' => 'getProgramEligibility',
         'promotions' => 'getPromotions',
         'savingBasis' => 'getSavingBasis',
-        'violatesMAP' => 'getViolatesMAP'
+        'violatesMAP' => 'getViolatesMAP',
     ];
 
     /**
@@ -200,9 +200,9 @@ class OfferListing implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -219,18 +219,18 @@ class OfferListing implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['availability'] = isset($data['availability']) ? $data['availability'] : null;
-        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
-        $this->container['deliveryInfo'] = isset($data['deliveryInfo']) ? $data['deliveryInfo'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['isBuyBoxWinner'] = isset($data['isBuyBoxWinner']) ? $data['isBuyBoxWinner'] : null;
-        $this->container['loyaltyPoints'] = isset($data['loyaltyPoints']) ? $data['loyaltyPoints'] : null;
-        $this->container['merchantInfo'] = isset($data['merchantInfo']) ? $data['merchantInfo'] : null;
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
-        $this->container['programEligibility'] = isset($data['programEligibility']) ? $data['programEligibility'] : null;
-        $this->container['promotions'] = isset($data['promotions']) ? $data['promotions'] : null;
-        $this->container['savingBasis'] = isset($data['savingBasis']) ? $data['savingBasis'] : null;
-        $this->container['violatesMAP'] = isset($data['violatesMAP']) ? $data['violatesMAP'] : null;
+        $this->container['availability'] = $data['availability'] ?? null;
+        $this->container['condition'] = $data['condition'] ?? null;
+        $this->container['deliveryInfo'] = $data['deliveryInfo'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['isBuyBoxWinner'] = $data['isBuyBoxWinner'] ?? null;
+        $this->container['loyaltyPoints'] = $data['loyaltyPoints'] ?? null;
+        $this->container['merchantInfo'] = $data['merchantInfo'] ?? null;
+        $this->container['price'] = $data['price'] ?? null;
+        $this->container['programEligibility'] = $data['programEligibility'] ?? null;
+        $this->container['promotions'] = $data['promotions'] ?? null;
+        $this->container['savingBasis'] = $data['savingBasis'] ?? null;
+        $this->container['violatesMAP'] = $data['violatesMAP'] ?? null;
     }
 
     /**
@@ -565,7 +565,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -614,5 +614,3 @@ class OfferListing implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

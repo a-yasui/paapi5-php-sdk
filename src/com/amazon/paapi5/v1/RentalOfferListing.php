@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * RentalOfferListing Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class RentalOfferListing implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -49,7 +49,7 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         'condition' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferCondition',
         'deliveryInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferDeliveryInfo',
         'id' => 'string',
-        'merchantInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferMerchantInfo'
+        'merchantInfo' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferMerchantInfo',
     ];
 
     /**
@@ -63,7 +63,7 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         'condition' => null,
         'deliveryInfo' => null,
         'id' => null,
-        'merchantInfo' => null
+        'merchantInfo' => null,
     ];
 
     /**
@@ -98,7 +98,7 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         'condition' => 'Condition',
         'deliveryInfo' => 'DeliveryInfo',
         'id' => 'Id',
-        'merchantInfo' => 'MerchantInfo'
+        'merchantInfo' => 'MerchantInfo',
     ];
 
     /**
@@ -112,7 +112,7 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         'condition' => 'setCondition',
         'deliveryInfo' => 'setDeliveryInfo',
         'id' => 'setId',
-        'merchantInfo' => 'setMerchantInfo'
+        'merchantInfo' => 'setMerchantInfo',
     ];
 
     /**
@@ -126,7 +126,7 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         'condition' => 'getCondition',
         'deliveryInfo' => 'getDeliveryInfo',
         'id' => 'getId',
-        'merchantInfo' => 'getMerchantInfo'
+        'merchantInfo' => 'getMerchantInfo',
     ];
 
     /**
@@ -170,9 +170,9 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -189,12 +189,12 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['availability'] = isset($data['availability']) ? $data['availability'] : null;
-        $this->container['basePrice'] = isset($data['basePrice']) ? $data['basePrice'] : null;
-        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
-        $this->container['deliveryInfo'] = isset($data['deliveryInfo']) ? $data['deliveryInfo'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['merchantInfo'] = isset($data['merchantInfo']) ? $data['merchantInfo'] : null;
+        $this->container['availability'] = $data['availability'] ?? null;
+        $this->container['basePrice'] = $data['basePrice'] ?? null;
+        $this->container['condition'] = $data['condition'] ?? null;
+        $this->container['deliveryInfo'] = $data['deliveryInfo'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['merchantInfo'] = $data['merchantInfo'] ?? null;
     }
 
     /**
@@ -385,7 +385,7 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -434,5 +434,3 @@ class RentalOfferListing implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

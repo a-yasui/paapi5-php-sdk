@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Merchant Class Doc Comment
@@ -30,9 +31,9 @@ class Merchant
     /**
      * Possible values of this enum
      */
-    const ALL = 'All';
-    const AMAZON = 'Amazon';
-    
+    public const ALL = 'All';
+    public const AMAZON = 'Amazon';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -45,5 +46,3 @@ class Merchant
         ];
     }
 }
-
-

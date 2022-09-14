@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * SearchRefinements Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class SearchRefinements implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class SearchRefinements implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'browseNode' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Refinement',
         'otherRefinements' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Refinement[]',
-        'searchIndex' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Refinement'
+        'searchIndex' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Refinement',
     ];
 
     /**
@@ -57,7 +57,7 @@ class SearchRefinements implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'browseNode' => null,
         'otherRefinements' => null,
-        'searchIndex' => null
+        'searchIndex' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class SearchRefinements implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'browseNode' => 'BrowseNode',
         'otherRefinements' => 'OtherRefinements',
-        'searchIndex' => 'SearchIndex'
+        'searchIndex' => 'SearchIndex',
     ];
 
     /**
@@ -100,7 +100,7 @@ class SearchRefinements implements ModelInterface, ArrayAccess
     protected static $setters = [
         'browseNode' => 'setBrowseNode',
         'otherRefinements' => 'setOtherRefinements',
-        'searchIndex' => 'setSearchIndex'
+        'searchIndex' => 'setSearchIndex',
     ];
 
     /**
@@ -111,7 +111,7 @@ class SearchRefinements implements ModelInterface, ArrayAccess
     protected static $getters = [
         'browseNode' => 'getBrowseNode',
         'otherRefinements' => 'getOtherRefinements',
-        'searchIndex' => 'getSearchIndex'
+        'searchIndex' => 'getSearchIndex',
     ];
 
     /**
@@ -155,9 +155,9 @@ class SearchRefinements implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class SearchRefinements implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['browseNode'] = isset($data['browseNode']) ? $data['browseNode'] : null;
-        $this->container['otherRefinements'] = isset($data['otherRefinements']) ? $data['otherRefinements'] : null;
-        $this->container['searchIndex'] = isset($data['searchIndex']) ? $data['searchIndex'] : null;
+        $this->container['browseNode'] = $data['browseNode'] ?? null;
+        $this->container['otherRefinements'] = $data['otherRefinements'] ?? null;
+        $this->container['searchIndex'] = $data['searchIndex'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class SearchRefinements implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class SearchRefinements implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

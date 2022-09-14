@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ExternalIds Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ExternalIds implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class ExternalIds implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'eANs' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute',
         'iSBNs' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute',
-        'uPCs' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute'
+        'uPCs' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute',
     ];
 
     /**
@@ -57,7 +57,7 @@ class ExternalIds implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'eANs' => null,
         'iSBNs' => null,
-        'uPCs' => null
+        'uPCs' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class ExternalIds implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'eANs' => 'EANs',
         'iSBNs' => 'ISBNs',
-        'uPCs' => 'UPCs'
+        'uPCs' => 'UPCs',
     ];
 
     /**
@@ -100,7 +100,7 @@ class ExternalIds implements ModelInterface, ArrayAccess
     protected static $setters = [
         'eANs' => 'setEANs',
         'iSBNs' => 'setISBNs',
-        'uPCs' => 'setUPCs'
+        'uPCs' => 'setUPCs',
     ];
 
     /**
@@ -111,7 +111,7 @@ class ExternalIds implements ModelInterface, ArrayAccess
     protected static $getters = [
         'eANs' => 'getEANs',
         'iSBNs' => 'getISBNs',
-        'uPCs' => 'getUPCs'
+        'uPCs' => 'getUPCs',
     ];
 
     /**
@@ -155,9 +155,9 @@ class ExternalIds implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class ExternalIds implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['eANs'] = isset($data['eANs']) ? $data['eANs'] : null;
-        $this->container['iSBNs'] = isset($data['iSBNs']) ? $data['iSBNs'] : null;
-        $this->container['uPCs'] = isset($data['uPCs']) ? $data['uPCs'] : null;
+        $this->container['eANs'] = $data['eANs'] ?? null;
+        $this->container['iSBNs'] = $data['iSBNs'] ?? null;
+        $this->container['uPCs'] = $data['uPCs'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class ExternalIds implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class ExternalIds implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

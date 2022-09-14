@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ByLineInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ByLineInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class ByLineInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'brand' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
         'contributors' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Contributor[]',
-        'manufacturer' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute'
+        'manufacturer' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
     ];
 
     /**
@@ -57,7 +57,7 @@ class ByLineInfo implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'brand' => null,
         'contributors' => null,
-        'manufacturer' => null
+        'manufacturer' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class ByLineInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'brand' => 'Brand',
         'contributors' => 'Contributors',
-        'manufacturer' => 'Manufacturer'
+        'manufacturer' => 'Manufacturer',
     ];
 
     /**
@@ -100,7 +100,7 @@ class ByLineInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
         'brand' => 'setBrand',
         'contributors' => 'setContributors',
-        'manufacturer' => 'setManufacturer'
+        'manufacturer' => 'setManufacturer',
     ];
 
     /**
@@ -111,7 +111,7 @@ class ByLineInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
         'brand' => 'getBrand',
         'contributors' => 'getContributors',
-        'manufacturer' => 'getManufacturer'
+        'manufacturer' => 'getManufacturer',
     ];
 
     /**
@@ -155,9 +155,9 @@ class ByLineInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class ByLineInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
-        $this->container['contributors'] = isset($data['contributors']) ? $data['contributors'] : null;
-        $this->container['manufacturer'] = isset($data['manufacturer']) ? $data['manufacturer'] : null;
+        $this->container['brand'] = $data['brand'] ?? null;
+        $this->container['contributors'] = $data['contributors'] ?? null;
+        $this->container['manufacturer'] = $data['manufacturer'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class ByLineInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class ByLineInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

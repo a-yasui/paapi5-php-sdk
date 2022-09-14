@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferSubCondition Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferSubCondition implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         'displayValue' => 'string',
         'label' => 'string',
         'locale' => 'string',
-        'value' => 'string'
+        'value' => 'string',
     ];
 
     /**
@@ -59,7 +59,7 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         'displayValue' => null,
         'label' => null,
         'locale' => null,
-        'value' => null
+        'value' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         'displayValue' => 'DisplayValue',
         'label' => 'Label',
         'locale' => 'Locale',
-        'value' => 'Value'
+        'value' => 'Value',
     ];
 
     /**
@@ -104,7 +104,7 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         'displayValue' => 'setDisplayValue',
         'label' => 'setLabel',
         'locale' => 'setLocale',
-        'value' => 'setValue'
+        'value' => 'setValue',
     ];
 
     /**
@@ -116,7 +116,7 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         'displayValue' => 'getDisplayValue',
         'label' => 'getLabel',
         'locale' => 'getLocale',
-        'value' => 'getValue'
+        'value' => 'getValue',
     ];
 
     /**
@@ -160,9 +160,9 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayValue'] = isset($data['displayValue']) ? $data['displayValue'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['displayValue'] = $data['displayValue'] ?? null;
+        $this->container['label'] = $data['label'] ?? null;
+        $this->container['locale'] = $data['locale'] ?? null;
+        $this->container['value'] = $data['value'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class OfferSubCondition implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

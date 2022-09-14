@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ContentInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ContentInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class ContentInfo implements ModelInterface, ArrayAccess
         'edition' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
         'languages' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Languages',
         'pagesCount' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleIntegerValuedAttribute',
-        'publicationDate' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute'
+        'publicationDate' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
     ];
 
     /**
@@ -59,7 +59,7 @@ class ContentInfo implements ModelInterface, ArrayAccess
         'edition' => null,
         'languages' => null,
         'pagesCount' => null,
-        'publicationDate' => null
+        'publicationDate' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class ContentInfo implements ModelInterface, ArrayAccess
         'edition' => 'Edition',
         'languages' => 'Languages',
         'pagesCount' => 'PagesCount',
-        'publicationDate' => 'PublicationDate'
+        'publicationDate' => 'PublicationDate',
     ];
 
     /**
@@ -104,7 +104,7 @@ class ContentInfo implements ModelInterface, ArrayAccess
         'edition' => 'setEdition',
         'languages' => 'setLanguages',
         'pagesCount' => 'setPagesCount',
-        'publicationDate' => 'setPublicationDate'
+        'publicationDate' => 'setPublicationDate',
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContentInfo implements ModelInterface, ArrayAccess
         'edition' => 'getEdition',
         'languages' => 'getLanguages',
         'pagesCount' => 'getPagesCount',
-        'publicationDate' => 'getPublicationDate'
+        'publicationDate' => 'getPublicationDate',
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContentInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class ContentInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['edition'] = isset($data['edition']) ? $data['edition'] : null;
-        $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
-        $this->container['pagesCount'] = isset($data['pagesCount']) ? $data['pagesCount'] : null;
-        $this->container['publicationDate'] = isset($data['publicationDate']) ? $data['publicationDate'] : null;
+        $this->container['edition'] = $data['edition'] ?? null;
+        $this->container['languages'] = $data['languages'] ?? null;
+        $this->container['pagesCount'] = $data['pagesCount'] ?? null;
+        $this->container['publicationDate'] = $data['publicationDate'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class ContentInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class ContentInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

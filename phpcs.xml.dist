@@ -9,8 +9,6 @@
 
     <file>./src</file>
 
-    <rule ref="PSR2">
-        <exclude name="PSR2.Namespaces.NamespaceDeclaration.BlankLineAfter"></exclude>
-        <exclude name="Generic.Files.LineLength"></exclude>
+    <rule ref="PSR12">
     </rule>
 </ruleset>

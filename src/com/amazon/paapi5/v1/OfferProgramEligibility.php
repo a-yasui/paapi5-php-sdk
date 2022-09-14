@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferProgramEligibility Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferProgramEligibility implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'isPrimeExclusive' => 'bool',
-        'isPrimePantry' => 'bool'
+        'isPrimePantry' => 'bool',
     ];
 
     /**
@@ -55,7 +55,7 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'isPrimeExclusive' => null,
-        'isPrimePantry' => null
+        'isPrimePantry' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'isPrimeExclusive' => 'IsPrimeExclusive',
-        'isPrimePantry' => 'IsPrimePantry'
+        'isPrimePantry' => 'IsPrimePantry',
     ];
 
     /**
@@ -96,7 +96,7 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'isPrimeExclusive' => 'setIsPrimeExclusive',
-        'isPrimePantry' => 'setIsPrimePantry'
+        'isPrimePantry' => 'setIsPrimePantry',
     ];
 
     /**
@@ -106,7 +106,7 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'isPrimeExclusive' => 'getIsPrimeExclusive',
-        'isPrimePantry' => 'getIsPrimePantry'
+        'isPrimePantry' => 'getIsPrimePantry',
     ];
 
     /**
@@ -150,9 +150,9 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['isPrimeExclusive'] = isset($data['isPrimeExclusive']) ? $data['isPrimeExclusive'] : null;
-        $this->container['isPrimePantry'] = isset($data['isPrimePantry']) ? $data['isPrimePantry'] : null;
+        $this->container['isPrimeExclusive'] = $data['isPrimeExclusive'] ?? null;
+        $this->container['isPrimePantry'] = $data['isPrimePantry'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class OfferProgramEligibility implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

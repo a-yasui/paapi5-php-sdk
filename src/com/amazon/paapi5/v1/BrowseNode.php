@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * BrowseNode Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class BrowseNode implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -50,7 +50,7 @@ class BrowseNode implements ModelInterface, ArrayAccess
         'displayName' => 'string',
         'id' => 'string',
         'isRoot' => 'bool',
-        'salesRank' => 'int'
+        'salesRank' => 'int',
     ];
 
     /**
@@ -65,7 +65,7 @@ class BrowseNode implements ModelInterface, ArrayAccess
         'displayName' => null,
         'id' => null,
         'isRoot' => null,
-        'salesRank' => 'int64'
+        'salesRank' => 'int64',
     ];
 
     /**
@@ -101,7 +101,7 @@ class BrowseNode implements ModelInterface, ArrayAccess
         'displayName' => 'DisplayName',
         'id' => 'Id',
         'isRoot' => 'IsRoot',
-        'salesRank' => 'SalesRank'
+        'salesRank' => 'SalesRank',
     ];
 
     /**
@@ -116,7 +116,7 @@ class BrowseNode implements ModelInterface, ArrayAccess
         'displayName' => 'setDisplayName',
         'id' => 'setId',
         'isRoot' => 'setIsRoot',
-        'salesRank' => 'setSalesRank'
+        'salesRank' => 'setSalesRank',
     ];
 
     /**
@@ -131,7 +131,7 @@ class BrowseNode implements ModelInterface, ArrayAccess
         'displayName' => 'getDisplayName',
         'id' => 'getId',
         'isRoot' => 'getIsRoot',
-        'salesRank' => 'getSalesRank'
+        'salesRank' => 'getSalesRank',
     ];
 
     /**
@@ -175,9 +175,9 @@ class BrowseNode implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -194,13 +194,13 @@ class BrowseNode implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ancestor'] = isset($data['ancestor']) ? $data['ancestor'] : null;
-        $this->container['children'] = isset($data['children']) ? $data['children'] : null;
-        $this->container['contextFreeName'] = isset($data['contextFreeName']) ? $data['contextFreeName'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['isRoot'] = isset($data['isRoot']) ? $data['isRoot'] : null;
-        $this->container['salesRank'] = isset($data['salesRank']) ? $data['salesRank'] : null;
+        $this->container['ancestor'] = $data['ancestor'] ?? null;
+        $this->container['children'] = $data['children'] ?? null;
+        $this->container['contextFreeName'] = $data['contextFreeName'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['isRoot'] = $data['isRoot'] ?? null;
+        $this->container['salesRank'] = $data['salesRank'] ?? null;
     }
 
     /**
@@ -415,7 +415,7 @@ class BrowseNode implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -464,5 +464,3 @@ class BrowseNode implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

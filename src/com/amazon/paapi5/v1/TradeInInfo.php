@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * TradeInInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class TradeInInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class TradeInInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'isEligibleForTradeIn' => 'bool',
-        'price' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TradeInPrice'
+        'price' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TradeInPrice',
     ];
 
     /**
@@ -55,7 +55,7 @@ class TradeInInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'isEligibleForTradeIn' => null,
-        'price' => null
+        'price' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class TradeInInfo implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'isEligibleForTradeIn' => 'IsEligibleForTradeIn',
-        'price' => 'Price'
+        'price' => 'Price',
     ];
 
     /**
@@ -96,7 +96,7 @@ class TradeInInfo implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'isEligibleForTradeIn' => 'setIsEligibleForTradeIn',
-        'price' => 'setPrice'
+        'price' => 'setPrice',
     ];
 
     /**
@@ -106,7 +106,7 @@ class TradeInInfo implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'isEligibleForTradeIn' => 'getIsEligibleForTradeIn',
-        'price' => 'getPrice'
+        'price' => 'getPrice',
     ];
 
     /**
@@ -150,9 +150,9 @@ class TradeInInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class TradeInInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['isEligibleForTradeIn'] = isset($data['isEligibleForTradeIn']) ? $data['isEligibleForTradeIn'] : null;
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['isEligibleForTradeIn'] = $data['isEligibleForTradeIn'] ?? null;
+        $this->container['price'] = $data['price'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class TradeInInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class TradeInInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

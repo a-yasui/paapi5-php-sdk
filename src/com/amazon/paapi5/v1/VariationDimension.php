@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * VariationDimension Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class VariationDimension implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class VariationDimension implements ModelInterface, ArrayAccess
         'displayName' => 'string',
         'locale' => 'string',
         'name' => 'string',
-        'values' => 'string[]'
+        'values' => 'string[]',
     ];
 
     /**
@@ -59,7 +59,7 @@ class VariationDimension implements ModelInterface, ArrayAccess
         'displayName' => null,
         'locale' => null,
         'name' => null,
-        'values' => null
+        'values' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class VariationDimension implements ModelInterface, ArrayAccess
         'displayName' => 'DisplayName',
         'locale' => 'Locale',
         'name' => 'Name',
-        'values' => 'Values'
+        'values' => 'Values',
     ];
 
     /**
@@ -104,7 +104,7 @@ class VariationDimension implements ModelInterface, ArrayAccess
         'displayName' => 'setDisplayName',
         'locale' => 'setLocale',
         'name' => 'setName',
-        'values' => 'setValues'
+        'values' => 'setValues',
     ];
 
     /**
@@ -116,7 +116,7 @@ class VariationDimension implements ModelInterface, ArrayAccess
         'displayName' => 'getDisplayName',
         'locale' => 'getLocale',
         'name' => 'getName',
-        'values' => 'getValues'
+        'values' => 'getValues',
     ];
 
     /**
@@ -160,9 +160,9 @@ class VariationDimension implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class VariationDimension implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['locale'] = $data['locale'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
+        $this->container['values'] = $data['values'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class VariationDimension implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class VariationDimension implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

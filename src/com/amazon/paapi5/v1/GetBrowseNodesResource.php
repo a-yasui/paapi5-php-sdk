@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * GetBrowseNodesResource Class Doc Comment
@@ -30,9 +31,9 @@ class GetBrowseNodesResource
     /**
      * Possible values of this enum
      */
-    const ANCESTOR = 'BrowseNodes.Ancestor';
-    const CHILDREN = 'BrowseNodes.Children';
-    
+    public const ANCESTOR = 'BrowseNodes.Ancestor';
+    public const CHILDREN = 'BrowseNodes.Children';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -45,5 +46,3 @@ class GetBrowseNodesResource
         ];
     }
 }
-
-

@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferSummary Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferSummary implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class OfferSummary implements ModelInterface, ArrayAccess
         'condition' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferCondition',
         'highestPrice' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice',
         'lowestPrice' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice',
-        'offerCount' => 'int'
+        'offerCount' => 'int',
     ];
 
     /**
@@ -59,7 +59,7 @@ class OfferSummary implements ModelInterface, ArrayAccess
         'condition' => null,
         'highestPrice' => null,
         'lowestPrice' => null,
-        'offerCount' => 'int32'
+        'offerCount' => 'int32',
     ];
 
     /**
@@ -92,7 +92,7 @@ class OfferSummary implements ModelInterface, ArrayAccess
         'condition' => 'Condition',
         'highestPrice' => 'HighestPrice',
         'lowestPrice' => 'LowestPrice',
-        'offerCount' => 'OfferCount'
+        'offerCount' => 'OfferCount',
     ];
 
     /**
@@ -104,7 +104,7 @@ class OfferSummary implements ModelInterface, ArrayAccess
         'condition' => 'setCondition',
         'highestPrice' => 'setHighestPrice',
         'lowestPrice' => 'setLowestPrice',
-        'offerCount' => 'setOfferCount'
+        'offerCount' => 'setOfferCount',
     ];
 
     /**
@@ -116,7 +116,7 @@ class OfferSummary implements ModelInterface, ArrayAccess
         'condition' => 'getCondition',
         'highestPrice' => 'getHighestPrice',
         'lowestPrice' => 'getLowestPrice',
-        'offerCount' => 'getOfferCount'
+        'offerCount' => 'getOfferCount',
     ];
 
     /**
@@ -160,9 +160,9 @@ class OfferSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class OfferSummary implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
-        $this->container['highestPrice'] = isset($data['highestPrice']) ? $data['highestPrice'] : null;
-        $this->container['lowestPrice'] = isset($data['lowestPrice']) ? $data['lowestPrice'] : null;
-        $this->container['offerCount'] = isset($data['offerCount']) ? $data['offerCount'] : null;
+        $this->container['condition'] = $data['condition'] ?? null;
+        $this->container['highestPrice'] = $data['highestPrice'] ?? null;
+        $this->container['lowestPrice'] = $data['lowestPrice'] ?? null;
+        $this->container['offerCount'] = $data['offerCount'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class OfferSummary implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class OfferSummary implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

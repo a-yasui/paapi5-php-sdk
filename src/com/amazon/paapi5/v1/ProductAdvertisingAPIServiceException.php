@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ProductAdvertisingAPIServiceException Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -44,7 +44,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message' => 'string'
+        'message' => 'string',
     ];
 
     /**
@@ -53,7 +53,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'message' => null
+        'message' => null,
     ];
 
     /**
@@ -83,7 +83,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message'
+        'message' => 'message',
     ];
 
     /**
@@ -92,7 +92,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage'
+        'message' => 'setMessage',
     ];
 
     /**
@@ -101,7 +101,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage'
+        'message' => 'getMessage',
     ];
 
     /**
@@ -145,9 +145,9 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -164,7 +164,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['message'] = $data['message'] ?? null;
     }
 
     /**
@@ -235,7 +235,7 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -284,5 +284,3 @@ class ProductAdvertisingAPIServiceException implements ModelInterface, ArrayAcce
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

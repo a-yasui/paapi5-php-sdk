@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * GetItemsResponse Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class GetItemsResponse implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'errors' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ErrorData[]',
-        'itemsResult' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ItemsResult'
+        'itemsResult' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ItemsResult',
     ];
 
     /**
@@ -55,7 +55,7 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'errors' => null,
-        'itemsResult' => null
+        'itemsResult' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'errors' => 'Errors',
-        'itemsResult' => 'ItemsResult'
+        'itemsResult' => 'ItemsResult',
     ];
 
     /**
@@ -96,7 +96,7 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'errors' => 'setErrors',
-        'itemsResult' => 'setItemsResult'
+        'itemsResult' => 'setItemsResult',
     ];
 
     /**
@@ -106,7 +106,7 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'errors' => 'getErrors',
-        'itemsResult' => 'getItemsResult'
+        'itemsResult' => 'getItemsResult',
     ];
 
     /**
@@ -150,9 +150,9 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
-        $this->container['itemsResult'] = isset($data['itemsResult']) ? $data['itemsResult'] : null;
+        $this->container['errors'] = $data['errors'] ?? null;
+        $this->container['itemsResult'] = $data['itemsResult'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class GetItemsResponse implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

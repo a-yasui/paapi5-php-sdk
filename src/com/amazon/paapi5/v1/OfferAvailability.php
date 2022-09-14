@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferAvailability Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferAvailability implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         'maxOrderQuantity' => 'int',
         'message' => 'string',
         'minOrderQuantity' => 'int',
-        'type' => 'string'
+        'type' => 'string',
     ];
 
     /**
@@ -59,7 +59,7 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         'maxOrderQuantity' => 'int32',
         'message' => null,
         'minOrderQuantity' => 'int32',
-        'type' => null
+        'type' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         'maxOrderQuantity' => 'MaxOrderQuantity',
         'message' => 'Message',
         'minOrderQuantity' => 'MinOrderQuantity',
-        'type' => 'Type'
+        'type' => 'Type',
     ];
 
     /**
@@ -104,7 +104,7 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         'maxOrderQuantity' => 'setMaxOrderQuantity',
         'message' => 'setMessage',
         'minOrderQuantity' => 'setMinOrderQuantity',
-        'type' => 'setType'
+        'type' => 'setType',
     ];
 
     /**
@@ -116,7 +116,7 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         'maxOrderQuantity' => 'getMaxOrderQuantity',
         'message' => 'getMessage',
         'minOrderQuantity' => 'getMinOrderQuantity',
-        'type' => 'getType'
+        'type' => 'getType',
     ];
 
     /**
@@ -160,9 +160,9 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class OfferAvailability implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['maxOrderQuantity'] = isset($data['maxOrderQuantity']) ? $data['maxOrderQuantity'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['minOrderQuantity'] = isset($data['minOrderQuantity']) ? $data['minOrderQuantity'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['maxOrderQuantity'] = $data['maxOrderQuantity'] ?? null;
+        $this->container['message'] = $data['message'] ?? null;
+        $this->container['minOrderQuantity'] = $data['minOrderQuantity'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class OfferAvailability implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class OfferAvailability implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

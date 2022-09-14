@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ImageType Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ImageType implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class ImageType implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'small' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageSize',
         'medium' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageSize',
-        'large' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageSize'
+        'large' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageSize',
     ];
 
     /**
@@ -57,7 +57,7 @@ class ImageType implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'small' => null,
         'medium' => null,
-        'large' => null
+        'large' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class ImageType implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'small' => 'Small',
         'medium' => 'Medium',
-        'large' => 'Large'
+        'large' => 'Large',
     ];
 
     /**
@@ -100,7 +100,7 @@ class ImageType implements ModelInterface, ArrayAccess
     protected static $setters = [
         'small' => 'setSmall',
         'medium' => 'setMedium',
-        'large' => 'setLarge'
+        'large' => 'setLarge',
     ];
 
     /**
@@ -111,7 +111,7 @@ class ImageType implements ModelInterface, ArrayAccess
     protected static $getters = [
         'small' => 'getSmall',
         'medium' => 'getMedium',
-        'large' => 'getLarge'
+        'large' => 'getLarge',
     ];
 
     /**
@@ -155,9 +155,9 @@ class ImageType implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class ImageType implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['small'] = isset($data['small']) ? $data['small'] : null;
-        $this->container['medium'] = isset($data['medium']) ? $data['medium'] : null;
-        $this->container['large'] = isset($data['large']) ? $data['large'] : null;
+        $this->container['small'] = $data['small'] ?? null;
+        $this->container['medium'] = $data['medium'] ?? null;
+        $this->container['large'] = $data['large'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class ImageType implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class ImageType implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

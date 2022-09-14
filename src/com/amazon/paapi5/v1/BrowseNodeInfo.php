@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * BrowseNodeInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class BrowseNodeInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'browseNodes' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\BrowseNode[]',
-        'websiteSalesRank' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\WebsiteSalesRank'
+        'websiteSalesRank' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\WebsiteSalesRank',
     ];
 
     /**
@@ -55,7 +55,7 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'browseNodes' => null,
-        'websiteSalesRank' => null
+        'websiteSalesRank' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'browseNodes' => 'BrowseNodes',
-        'websiteSalesRank' => 'WebsiteSalesRank'
+        'websiteSalesRank' => 'WebsiteSalesRank',
     ];
 
     /**
@@ -96,7 +96,7 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'browseNodes' => 'setBrowseNodes',
-        'websiteSalesRank' => 'setWebsiteSalesRank'
+        'websiteSalesRank' => 'setWebsiteSalesRank',
     ];
 
     /**
@@ -106,7 +106,7 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'browseNodes' => 'getBrowseNodes',
-        'websiteSalesRank' => 'getWebsiteSalesRank'
+        'websiteSalesRank' => 'getWebsiteSalesRank',
     ];
 
     /**
@@ -150,9 +150,9 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['browseNodes'] = isset($data['browseNodes']) ? $data['browseNodes'] : null;
-        $this->container['websiteSalesRank'] = isset($data['websiteSalesRank']) ? $data['websiteSalesRank'] : null;
+        $this->container['browseNodes'] = $data['browseNodes'] ?? null;
+        $this->container['websiteSalesRank'] = $data['websiteSalesRank'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class BrowseNodeInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

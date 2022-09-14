@@ -17,8 +17,9 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ReturnTypeWillChange;
 
 /**
  * GetVariationsRequest Class Doc Comment
@@ -29,7 +30,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class GetVariationsRequest implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -56,7 +57,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         'properties' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Properties',
         'resources' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetVariationsResource[]',
         'variationCount' => 'int',
-        'variationPage' => 'int'
+        'variationPage' => 'int',
     ];
 
     /**
@@ -77,7 +78,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         'properties' => null,
         'resources' => null,
         'variationCount' => 'int32',
-        'variationPage' => 'int32'
+        'variationPage' => 'int32',
     ];
 
     /**
@@ -119,7 +120,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         'properties' => 'Properties',
         'resources' => 'Resources',
         'variationCount' => 'VariationCount',
-        'variationPage' => 'VariationPage'
+        'variationPage' => 'VariationPage',
     ];
 
     /**
@@ -140,7 +141,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         'properties' => 'setProperties',
         'resources' => 'setResources',
         'variationCount' => 'setVariationCount',
-        'variationPage' => 'setVariationPage'
+        'variationPage' => 'setVariationPage',
     ];
 
     /**
@@ -161,7 +162,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         'properties' => 'getProperties',
         'resources' => 'getResources',
         'variationCount' => 'getVariationCount',
-        'variationPage' => 'getVariationPage'
+        'variationPage' => 'getVariationPage',
     ];
 
     /**
@@ -205,9 +206,9 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -224,19 +225,19 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['aSIN'] = isset($data['aSIN']) ? $data['aSIN'] : null;
-        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
-        $this->container['currencyOfPreference'] = isset($data['currencyOfPreference']) ? $data['currencyOfPreference'] : null;
-        $this->container['languagesOfPreference'] = isset($data['languagesOfPreference']) ? $data['languagesOfPreference'] : null;
-        $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
-        $this->container['merchant'] = isset($data['merchant']) ? $data['merchant'] : null;
-        $this->container['offerCount'] = isset($data['offerCount']) ? $data['offerCount'] : null;
-        $this->container['partnerTag'] = isset($data['partnerTag']) ? $data['partnerTag'] : null;
-        $this->container['partnerType'] = isset($data['partnerType']) ? $data['partnerType'] : null;
-        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
-        $this->container['variationCount'] = isset($data['variationCount']) ? $data['variationCount'] : null;
-        $this->container['variationPage'] = isset($data['variationPage']) ? $data['variationPage'] : null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['condition'] = $data['condition'] ?? null;
+        $this->container['currencyOfPreference'] = $data['currencyOfPreference'] ?? null;
+        $this->container['languagesOfPreference'] = $data['languagesOfPreference'] ?? null;
+        $this->container['marketplace'] = $data['marketplace'] ?? null;
+        $this->container['merchant'] = $data['merchant'] ?? null;
+        $this->container['offerCount'] = $data['offerCount'] ?? null;
+        $this->container['partnerTag'] = $data['partnerTag'] ?? null;
+        $this->container['partnerType'] = $data['partnerType'] ?? null;
+        $this->container['properties'] = $data['properties'] ?? null;
+        $this->container['resources'] = $data['resources'] ?? null;
+        $this->container['variationCount'] = $data['variationCount'] ?? null;
+        $this->container['variationPage'] = $data['variationPage'] ?? null;
     }
 
     /**
@@ -590,6 +591,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -602,9 +604,10 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[ReturnTypeWillChange]
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -615,6 +618,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -631,6 +635,7 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -653,5 +658,3 @@ class GetVariationsRequest implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

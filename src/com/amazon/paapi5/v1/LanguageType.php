@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * LanguageType Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class LanguageType implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class LanguageType implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'displayValue' => 'string',
-        'type' => 'string'
+        'type' => 'string',
     ];
 
     /**
@@ -55,7 +55,7 @@ class LanguageType implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'displayValue' => null,
-        'type' => null
+        'type' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class LanguageType implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'displayValue' => 'DisplayValue',
-        'type' => 'Type'
+        'type' => 'Type',
     ];
 
     /**
@@ -96,7 +96,7 @@ class LanguageType implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'displayValue' => 'setDisplayValue',
-        'type' => 'setType'
+        'type' => 'setType',
     ];
 
     /**
@@ -106,7 +106,7 @@ class LanguageType implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'displayValue' => 'getDisplayValue',
-        'type' => 'getType'
+        'type' => 'getType',
     ];
 
     /**
@@ -150,9 +150,9 @@ class LanguageType implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class LanguageType implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayValue'] = isset($data['displayValue']) ? $data['displayValue'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['displayValue'] = $data['displayValue'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class LanguageType implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class LanguageType implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * GetBrowseNodesResponse Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'browseNodesResult' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\BrowseNodesResult',
-        'errors' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ErrorData[]'
+        'errors' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ErrorData[]',
     ];
 
     /**
@@ -55,7 +55,7 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'browseNodesResult' => null,
-        'errors' => null
+        'errors' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'browseNodesResult' => 'BrowseNodesResult',
-        'errors' => 'Errors'
+        'errors' => 'Errors',
     ];
 
     /**
@@ -96,7 +96,7 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'browseNodesResult' => 'setBrowseNodesResult',
-        'errors' => 'setErrors'
+        'errors' => 'setErrors',
     ];
 
     /**
@@ -106,7 +106,7 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'browseNodesResult' => 'getBrowseNodesResult',
-        'errors' => 'getErrors'
+        'errors' => 'getErrors',
     ];
 
     /**
@@ -150,9 +150,9 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['browseNodesResult'] = isset($data['browseNodesResult']) ? $data['browseNodesResult'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['browseNodesResult'] = $data['browseNodesResult'] ?? null;
+        $this->container['errors'] = $data['errors'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class GetBrowseNodesResponse implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

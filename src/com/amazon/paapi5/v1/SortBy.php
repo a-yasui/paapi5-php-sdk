@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * SortBy Class Doc Comment
@@ -30,13 +31,13 @@ class SortBy
     /**
      * Possible values of this enum
      */
-    const AVG_CUSTOMER_REVIEWS = 'AvgCustomerReviews';
-    const FEATURED = 'Featured';
-    const NEWEST_ARRIVALS = 'NewestArrivals';
-    const PRICEHIGH_TO_LOW = 'Price:HighToLow';
-    const PRICELOW_TO_HIGH = 'Price:LowToHigh';
-    const RELEVANCE = 'Relevance';
-    
+    public const AVG_CUSTOMER_REVIEWS = 'AvgCustomerReviews';
+    public const FEATURED = 'Featured';
+    public const NEWEST_ARRIVALS = 'NewestArrivals';
+    public const PRICEHIGH_TO_LOW = 'Price:HighToLow';
+    public const PRICELOW_TO_HIGH = 'Price:LowToHigh';
+    public const RELEVANCE = 'Relevance';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -53,5 +54,3 @@ class SortBy
         ];
     }
 }
-
-

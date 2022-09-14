@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ProductInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ProductInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -49,7 +49,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'itemDimensions' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\DimensionBasedAttribute',
         'releaseDate' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
         'size' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
-        'unitCount' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleIntegerValuedAttribute'
+        'unitCount' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleIntegerValuedAttribute',
     ];
 
     /**
@@ -63,7 +63,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'itemDimensions' => null,
         'releaseDate' => null,
         'size' => null,
-        'unitCount' => null
+        'unitCount' => null,
     ];
 
     /**
@@ -98,7 +98,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'itemDimensions' => 'ItemDimensions',
         'releaseDate' => 'ReleaseDate',
         'size' => 'Size',
-        'unitCount' => 'UnitCount'
+        'unitCount' => 'UnitCount',
     ];
 
     /**
@@ -112,7 +112,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'itemDimensions' => 'setItemDimensions',
         'releaseDate' => 'setReleaseDate',
         'size' => 'setSize',
-        'unitCount' => 'setUnitCount'
+        'unitCount' => 'setUnitCount',
     ];
 
     /**
@@ -126,7 +126,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'itemDimensions' => 'getItemDimensions',
         'releaseDate' => 'getReleaseDate',
         'size' => 'getSize',
-        'unitCount' => 'getUnitCount'
+        'unitCount' => 'getUnitCount',
     ];
 
     /**
@@ -170,9 +170,9 @@ class ProductInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -189,12 +189,12 @@ class ProductInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['color'] = isset($data['color']) ? $data['color'] : null;
-        $this->container['isAdultProduct'] = isset($data['isAdultProduct']) ? $data['isAdultProduct'] : null;
-        $this->container['itemDimensions'] = isset($data['itemDimensions']) ? $data['itemDimensions'] : null;
-        $this->container['releaseDate'] = isset($data['releaseDate']) ? $data['releaseDate'] : null;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['unitCount'] = isset($data['unitCount']) ? $data['unitCount'] : null;
+        $this->container['color'] = $data['color'] ?? null;
+        $this->container['isAdultProduct'] = $data['isAdultProduct'] ?? null;
+        $this->container['itemDimensions'] = $data['itemDimensions'] ?? null;
+        $this->container['releaseDate'] = $data['releaseDate'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
+        $this->container['unitCount'] = $data['unitCount'] ?? null;
     }
 
     /**
@@ -385,7 +385,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -434,5 +434,3 @@ class ProductInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

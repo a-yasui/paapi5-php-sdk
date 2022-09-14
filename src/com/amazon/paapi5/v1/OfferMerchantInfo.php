@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferMerchantInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferMerchantInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -48,7 +48,7 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         'feedbackCount' => 'int',
         'feedbackRating' => 'float',
         'id' => 'string',
-        'name' => 'string'
+        'name' => 'string',
     ];
 
     /**
@@ -61,7 +61,7 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         'feedbackCount' => 'int32',
         'feedbackRating' => null,
         'id' => null,
-        'name' => null
+        'name' => null,
     ];
 
     /**
@@ -95,7 +95,7 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         'feedbackCount' => 'FeedbackCount',
         'feedbackRating' => 'FeedbackRating',
         'id' => 'Id',
-        'name' => 'Name'
+        'name' => 'Name',
     ];
 
     /**
@@ -108,7 +108,7 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         'feedbackCount' => 'setFeedbackCount',
         'feedbackRating' => 'setFeedbackRating',
         'id' => 'setId',
-        'name' => 'setName'
+        'name' => 'setName',
     ];
 
     /**
@@ -121,7 +121,7 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         'feedbackCount' => 'getFeedbackCount',
         'feedbackRating' => 'getFeedbackRating',
         'id' => 'getId',
-        'name' => 'getName'
+        'name' => 'getName',
     ];
 
     /**
@@ -165,9 +165,9 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -184,11 +184,11 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['defaultShippingCountry'] = isset($data['defaultShippingCountry']) ? $data['defaultShippingCountry'] : null;
-        $this->container['feedbackCount'] = isset($data['feedbackCount']) ? $data['feedbackCount'] : null;
-        $this->container['feedbackRating'] = isset($data['feedbackRating']) ? $data['feedbackRating'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['defaultShippingCountry'] = $data['defaultShippingCountry'] ?? null;
+        $this->container['feedbackCount'] = $data['feedbackCount'] ?? null;
+        $this->container['feedbackRating'] = $data['feedbackRating'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
     }
 
     /**
@@ -355,7 +355,7 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -404,5 +404,3 @@ class OfferMerchantInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -81,7 +81,7 @@ function getVariations()
      */
     $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE];
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();
@@ -205,7 +205,7 @@ function getVariationsWithHttpInfo()
      */
     $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE];
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();
@@ -333,7 +333,7 @@ function getVariationsAsync()
      */
     $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE];
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();
@@ -468,7 +468,7 @@ function getVariationsAsyncWithHttpInfo()
      */
     $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE];
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();

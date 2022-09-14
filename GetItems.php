@@ -46,7 +46,7 @@ require_once(__DIR__ . '/vendor/autoload.php'); // change path as needed
  */
 function parseResponse($items)
 {
-    $mappedResponse = array();
+    $mappedResponse = [];
     foreach ($items as $item) {
         $mappedResponse[$item->getASIN()] = $item;
     }
@@ -76,24 +76,26 @@ function getItems()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Choose item id(s)
-    $itemIds = array("059035342X", "B00X4WHP55", "1401263119");
+    $itemIds = ["059035342X", "B00X4WHP55", "1401263119"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE);
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();
@@ -199,24 +201,26 @@ function getItemsWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Choose item id(s)
-    $itemIds = array("059035342X", "B00X4WHP55", "1401263119");
+    $itemIds = ["059035342X", "B00X4WHP55", "1401263119"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE);
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();
@@ -325,24 +329,26 @@ function getItemsAsync()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Choose item id(s)
-    $itemIds = array("059035342X", "B00X4WHP55", "1401263119");
+    $itemIds = ["059035342X", "B00X4WHP55", "1401263119"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE);
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();
@@ -457,24 +463,26 @@ function getItemsAsyncWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Choose item id(s)
-    $itemIds = array("059035342X", "B00X4WHP55", "1401263119");
+    $itemIds = ["059035342X", "B00X4WHP55", "1401263119"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE);
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();

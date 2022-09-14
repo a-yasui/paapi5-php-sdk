@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferPrice Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferPrice implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -50,7 +50,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
         'pricePerUnit' => 'float',
         'priceType' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\PriceType',
         'priceTypeLabel' => 'string',
-        'savings' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSavings'
+        'savings' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSavings',
     ];
 
     /**
@@ -65,7 +65,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
         'pricePerUnit' => null,
         'priceType' => null,
         'priceTypeLabel' => null,
-        'savings' => null
+        'savings' => null,
     ];
 
     /**
@@ -101,7 +101,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
         'pricePerUnit' => 'PricePerUnit',
         'priceType' => 'PriceType',
         'priceTypeLabel' => 'PriceTypeLabel',
-        'savings' => 'Savings'
+        'savings' => 'Savings',
     ];
 
     /**
@@ -116,7 +116,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
         'pricePerUnit' => 'setPricePerUnit',
         'priceType' => 'setPriceType',
         'priceTypeLabel' => 'setPriceTypeLabel',
-        'savings' => 'setSavings'
+        'savings' => 'setSavings',
     ];
 
     /**
@@ -131,7 +131,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
         'pricePerUnit' => 'getPricePerUnit',
         'priceType' => 'getPriceType',
         'priceTypeLabel' => 'getPriceTypeLabel',
-        'savings' => 'getSavings'
+        'savings' => 'getSavings',
     ];
 
     /**
@@ -175,9 +175,9 @@ class OfferPrice implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -194,13 +194,13 @@ class OfferPrice implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['displayAmount'] = isset($data['displayAmount']) ? $data['displayAmount'] : null;
-        $this->container['pricePerUnit'] = isset($data['pricePerUnit']) ? $data['pricePerUnit'] : null;
-        $this->container['priceType'] = isset($data['priceType']) ? $data['priceType'] : null;
-        $this->container['priceTypeLabel'] = isset($data['priceTypeLabel']) ? $data['priceTypeLabel'] : null;
-        $this->container['savings'] = isset($data['savings']) ? $data['savings'] : null;
+        $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['displayAmount'] = $data['displayAmount'] ?? null;
+        $this->container['pricePerUnit'] = $data['pricePerUnit'] ?? null;
+        $this->container['priceType'] = $data['priceType'] ?? null;
+        $this->container['priceTypeLabel'] = $data['priceTypeLabel'] ?? null;
+        $this->container['savings'] = $data['savings'] ?? null;
     }
 
     /**
@@ -401,7 +401,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset) : bool
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -413,9 +413,9 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset) : mixed
+    public function offsetGet($offset): mixed
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -426,7 +426,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value) : void
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -442,7 +442,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset) : void
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -464,5 +464,3 @@ class OfferPrice implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Price Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class Price implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class Price implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'highestPrice' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice',
-        'lowestPrice' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice'
+        'lowestPrice' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice',
     ];
 
     /**
@@ -55,7 +55,7 @@ class Price implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'highestPrice' => null,
-        'lowestPrice' => null
+        'lowestPrice' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class Price implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'highestPrice' => 'HighestPrice',
-        'lowestPrice' => 'LowestPrice'
+        'lowestPrice' => 'LowestPrice',
     ];
 
     /**
@@ -96,7 +96,7 @@ class Price implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'highestPrice' => 'setHighestPrice',
-        'lowestPrice' => 'setLowestPrice'
+        'lowestPrice' => 'setLowestPrice',
     ];
 
     /**
@@ -106,7 +106,7 @@ class Price implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'highestPrice' => 'getHighestPrice',
-        'lowestPrice' => 'getLowestPrice'
+        'lowestPrice' => 'getLowestPrice',
     ];
 
     /**
@@ -150,9 +150,9 @@ class Price implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class Price implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['highestPrice'] = isset($data['highestPrice']) ? $data['highestPrice'] : null;
-        $this->container['lowestPrice'] = isset($data['lowestPrice']) ? $data['lowestPrice'] : null;
+        $this->container['highestPrice'] = $data['highestPrice'] ?? null;
+        $this->container['lowestPrice'] = $data['lowestPrice'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class Price implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class Price implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

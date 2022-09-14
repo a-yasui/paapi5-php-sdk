@@ -60,11 +60,13 @@ function searchItems()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -84,9 +86,9 @@ function searchItems()
      * Choose resources you want from SearchItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/search-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE);
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();
@@ -187,11 +189,13 @@ function searchItemsWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -211,9 +215,9 @@ function searchItemsWithHttpInfo()
      * Choose resources you want from SearchItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/search-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE);
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();
@@ -318,11 +322,13 @@ function searchItemsAsync()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -342,9 +348,9 @@ function searchItemsAsync()
      * Choose resources you want from SearchItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/search-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE);
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();
@@ -455,11 +461,13 @@ function searchItemsAsyncWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -479,9 +487,9 @@ function searchItemsAsyncWithHttpInfo()
      * Choose resources you want from SearchItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/search-items.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE);
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();

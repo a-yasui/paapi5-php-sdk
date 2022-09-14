@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * SearchResult Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class SearchResult implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class SearchResult implements ModelInterface, ArrayAccess
         'totalResultCount' => 'int',
         'searchURL' => 'string',
         'items' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Item[]',
-        'searchRefinements' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SearchRefinements'
+        'searchRefinements' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SearchRefinements',
     ];
 
     /**
@@ -59,7 +59,7 @@ class SearchResult implements ModelInterface, ArrayAccess
         'totalResultCount' => 'int64',
         'searchURL' => null,
         'items' => null,
-        'searchRefinements' => null
+        'searchRefinements' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class SearchResult implements ModelInterface, ArrayAccess
         'totalResultCount' => 'TotalResultCount',
         'searchURL' => 'SearchURL',
         'items' => 'Items',
-        'searchRefinements' => 'SearchRefinements'
+        'searchRefinements' => 'SearchRefinements',
     ];
 
     /**
@@ -104,7 +104,7 @@ class SearchResult implements ModelInterface, ArrayAccess
         'totalResultCount' => 'setTotalResultCount',
         'searchURL' => 'setSearchURL',
         'items' => 'setItems',
-        'searchRefinements' => 'setSearchRefinements'
+        'searchRefinements' => 'setSearchRefinements',
     ];
 
     /**
@@ -116,7 +116,7 @@ class SearchResult implements ModelInterface, ArrayAccess
         'totalResultCount' => 'getTotalResultCount',
         'searchURL' => 'getSearchURL',
         'items' => 'getItems',
-        'searchRefinements' => 'getSearchRefinements'
+        'searchRefinements' => 'getSearchRefinements',
     ];
 
     /**
@@ -160,9 +160,9 @@ class SearchResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class SearchResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['totalResultCount'] = isset($data['totalResultCount']) ? $data['totalResultCount'] : null;
-        $this->container['searchURL'] = isset($data['searchURL']) ? $data['searchURL'] : null;
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
-        $this->container['searchRefinements'] = isset($data['searchRefinements']) ? $data['searchRefinements'] : null;
+        $this->container['totalResultCount'] = $data['totalResultCount'] ?? null;
+        $this->container['searchURL'] = $data['searchURL'] ?? null;
+        $this->container['items'] = $data['items'] ?? null;
+        $this->container['searchRefinements'] = $data['searchRefinements'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class SearchResult implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class SearchResult implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

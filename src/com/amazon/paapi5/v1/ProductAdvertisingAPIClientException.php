@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ProductAdvertisingAPIClientException Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -44,7 +44,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ErrorData[]'
+        'errors' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ErrorData[]',
     ];
 
     /**
@@ -53,7 +53,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'errors' => null
+        'errors' => null,
     ];
 
     /**
@@ -83,7 +83,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'errors' => 'Errors'
+        'errors' => 'Errors',
     ];
 
     /**
@@ -92,7 +92,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'errors' => 'setErrors'
+        'errors' => 'setErrors',
     ];
 
     /**
@@ -101,7 +101,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'errors' => 'getErrors'
+        'errors' => 'getErrors',
     ];
 
     /**
@@ -145,9 +145,9 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -164,7 +164,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['errors'] = $data['errors'] ?? null;
     }
 
     /**
@@ -237,7 +237,7 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -288,5 +288,3 @@ class ProductAdvertisingAPIClientException implements ModelInterface, ArrayAcces
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

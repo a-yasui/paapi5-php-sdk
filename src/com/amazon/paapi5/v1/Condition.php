@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Condition Class Doc Comment
@@ -30,12 +31,12 @@ class Condition
     /**
      * Possible values of this enum
      */
-    const ANY = 'Any';
-    const COLLECTIBLE = 'Collectible';
-    const _NEW = 'New';
-    const REFURBISHED = 'Refurbished';
-    const USED = 'Used';
-    
+    public const ANY = 'Any';
+    public const COLLECTIBLE = 'Collectible';
+    public const _NEW = 'New';
+    public const REFURBISHED = 'Refurbished';
+    public const USED = 'Used';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -51,5 +52,3 @@ class Condition
         ];
     }
 }
-
-

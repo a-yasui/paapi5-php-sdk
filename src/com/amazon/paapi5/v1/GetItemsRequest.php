@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * GetItemsRequest Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class GetItemsRequest implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -55,7 +55,7 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         'partnerTag' => 'string',
         'partnerType' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\PartnerType',
         'properties' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Properties',
-        'resources' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsResource[]'
+        'resources' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsResource[]',
     ];
 
     /**
@@ -75,7 +75,7 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         'partnerTag' => null,
         'partnerType' => null,
         'properties' => null,
-        'resources' => null
+        'resources' => null,
     ];
 
     /**
@@ -116,7 +116,7 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         'partnerTag' => 'PartnerTag',
         'partnerType' => 'PartnerType',
         'properties' => 'Properties',
-        'resources' => 'Resources'
+        'resources' => 'Resources',
     ];
 
     /**
@@ -136,7 +136,7 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         'partnerTag' => 'setPartnerTag',
         'partnerType' => 'setPartnerType',
         'properties' => 'setProperties',
-        'resources' => 'setResources'
+        'resources' => 'setResources',
     ];
 
     /**
@@ -156,7 +156,7 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         'partnerTag' => 'getPartnerTag',
         'partnerType' => 'getPartnerType',
         'properties' => 'getProperties',
-        'resources' => 'getResources'
+        'resources' => 'getResources',
     ];
 
     /**
@@ -200,9 +200,9 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -219,18 +219,18 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
-        $this->container['currencyOfPreference'] = isset($data['currencyOfPreference']) ? $data['currencyOfPreference'] : null;
-        $this->container['itemIds'] = isset($data['itemIds']) ? $data['itemIds'] : null;
-        $this->container['itemIdType'] = isset($data['itemIdType']) ? $data['itemIdType'] : null;
-        $this->container['languagesOfPreference'] = isset($data['languagesOfPreference']) ? $data['languagesOfPreference'] : null;
-        $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
-        $this->container['merchant'] = isset($data['merchant']) ? $data['merchant'] : null;
-        $this->container['offerCount'] = isset($data['offerCount']) ? $data['offerCount'] : null;
-        $this->container['partnerTag'] = isset($data['partnerTag']) ? $data['partnerTag'] : null;
-        $this->container['partnerType'] = isset($data['partnerType']) ? $data['partnerType'] : null;
-        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['condition'] = $data['condition'] ?? null;
+        $this->container['currencyOfPreference'] = $data['currencyOfPreference'] ?? null;
+        $this->container['itemIds'] = $data['itemIds'] ?? null;
+        $this->container['itemIdType'] = $data['itemIdType'] ?? null;
+        $this->container['languagesOfPreference'] = $data['languagesOfPreference'] ?? null;
+        $this->container['marketplace'] = $data['marketplace'] ?? null;
+        $this->container['merchant'] = $data['merchant'] ?? null;
+        $this->container['offerCount'] = $data['offerCount'] ?? null;
+        $this->container['partnerTag'] = $data['partnerTag'] ?? null;
+        $this->container['partnerType'] = $data['partnerType'] ?? null;
+        $this->container['properties'] = $data['properties'] ?? null;
+        $this->container['resources'] = $data['resources'] ?? null;
     }
 
     /**
@@ -576,7 +576,7 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -627,5 +627,3 @@ class GetItemsRequest implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

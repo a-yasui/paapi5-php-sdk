@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * RefinementBin Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class RefinementBin implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class RefinementBin implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'displayName' => 'string',
-        'id' => 'string'
+        'id' => 'string',
     ];
 
     /**
@@ -55,7 +55,7 @@ class RefinementBin implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'displayName' => null,
-        'id' => null
+        'id' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class RefinementBin implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'displayName' => 'DisplayName',
-        'id' => 'Id'
+        'id' => 'Id',
     ];
 
     /**
@@ -96,7 +96,7 @@ class RefinementBin implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'displayName' => 'setDisplayName',
-        'id' => 'setId'
+        'id' => 'setId',
     ];
 
     /**
@@ -106,7 +106,7 @@ class RefinementBin implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'displayName' => 'getDisplayName',
-        'id' => 'getId'
+        'id' => 'getId',
     ];
 
     /**
@@ -150,9 +150,9 @@ class RefinementBin implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class RefinementBin implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class RefinementBin implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class RefinementBin implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

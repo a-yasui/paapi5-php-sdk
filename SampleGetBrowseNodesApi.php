@@ -96,7 +96,7 @@ function getBrowseNodes()
      */
     $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN];
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();
@@ -214,7 +214,7 @@ function getBrowseNodesWithHttpInfo()
      */
     $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN];
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();
@@ -337,7 +337,7 @@ function getBrowseNodesAsync()
      */
     $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN];
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();
@@ -466,7 +466,7 @@ function getBrowseNodesAsyncWithHttpInfo()
      */
     $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN];
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();

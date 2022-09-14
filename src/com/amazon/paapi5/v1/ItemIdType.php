@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ItemIdType Class Doc Comment
@@ -30,8 +31,8 @@ class ItemIdType
     /**
      * Possible values of this enum
      */
-    const ASIN = 'ASIN';
-    
+    public const ASIN = 'ASIN';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -43,5 +44,3 @@ class ItemIdType
         ];
     }
 }
-
-

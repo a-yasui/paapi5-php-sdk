@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * VariationSummary Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class VariationSummary implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class VariationSummary implements ModelInterface, ArrayAccess
         'pageCount' => 'int',
         'price' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Price',
         'variationCount' => 'int',
-        'variationDimensions' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\VariationDimension[]'
+        'variationDimensions' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\VariationDimension[]',
     ];
 
     /**
@@ -59,7 +59,7 @@ class VariationSummary implements ModelInterface, ArrayAccess
         'pageCount' => 'int32',
         'price' => null,
         'variationCount' => 'int32',
-        'variationDimensions' => null
+        'variationDimensions' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class VariationSummary implements ModelInterface, ArrayAccess
         'pageCount' => 'PageCount',
         'price' => 'Price',
         'variationCount' => 'VariationCount',
-        'variationDimensions' => 'VariationDimensions'
+        'variationDimensions' => 'VariationDimensions',
     ];
 
     /**
@@ -104,7 +104,7 @@ class VariationSummary implements ModelInterface, ArrayAccess
         'pageCount' => 'setPageCount',
         'price' => 'setPrice',
         'variationCount' => 'setVariationCount',
-        'variationDimensions' => 'setVariationDimensions'
+        'variationDimensions' => 'setVariationDimensions',
     ];
 
     /**
@@ -116,7 +116,7 @@ class VariationSummary implements ModelInterface, ArrayAccess
         'pageCount' => 'getPageCount',
         'price' => 'getPrice',
         'variationCount' => 'getVariationCount',
-        'variationDimensions' => 'getVariationDimensions'
+        'variationDimensions' => 'getVariationDimensions',
     ];
 
     /**
@@ -160,9 +160,9 @@ class VariationSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class VariationSummary implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pageCount'] = isset($data['pageCount']) ? $data['pageCount'] : null;
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
-        $this->container['variationCount'] = isset($data['variationCount']) ? $data['variationCount'] : null;
-        $this->container['variationDimensions'] = isset($data['variationDimensions']) ? $data['variationDimensions'] : null;
+        $this->container['pageCount'] = $data['pageCount'] ?? null;
+        $this->container['price'] = $data['price'] ?? null;
+        $this->container['variationCount'] = $data['variationCount'] ?? null;
+        $this->container['variationDimensions'] = $data['variationDimensions'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class VariationSummary implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class VariationSummary implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

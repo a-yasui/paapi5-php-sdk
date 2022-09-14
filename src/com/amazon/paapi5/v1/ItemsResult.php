@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ItemsResult Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ItemsResult implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -44,7 +44,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Item[]'
+        'items' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Item[]',
     ];
 
     /**
@@ -53,7 +53,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'items' => null
+        'items' => null,
     ];
 
     /**
@@ -83,7 +83,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'items' => 'Items'
+        'items' => 'Items',
     ];
 
     /**
@@ -92,7 +92,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'items' => 'setItems'
+        'items' => 'setItems',
     ];
 
     /**
@@ -101,7 +101,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'items' => 'getItems'
+        'items' => 'getItems',
     ];
 
     /**
@@ -145,9 +145,9 @@ class ItemsResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -164,7 +164,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['items'] = $data['items'] ?? null;
     }
 
     /**
@@ -235,7 +235,7 @@ class ItemsResult implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -284,5 +284,3 @@ class ItemsResult implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

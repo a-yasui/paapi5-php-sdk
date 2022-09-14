@@ -60,11 +60,13 @@ function getVariations()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -75,9 +77,9 @@ function getVariations()
      * Choose resources you want from GetVariationsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-variations.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE);
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();
@@ -180,11 +182,13 @@ function getVariationsWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -195,9 +199,9 @@ function getVariationsWithHttpInfo()
      * Choose resources you want from GetVariationsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-variations.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE);
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();
@@ -304,11 +308,13 @@ function getVariationsAsync()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -319,9 +325,9 @@ function getVariationsAsync()
      * Choose resources you want from GetVariationsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-variations.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE);
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();
@@ -436,11 +442,13 @@ function getVariationsAsyncWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
@@ -451,9 +459,9 @@ function getVariationsAsyncWithHttpInfo()
      * Choose resources you want from GetVariationsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/get-variations.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetVariationsResource::ITEM_INFOTITLE,
-        GetVariationsResource::OFFERSLISTINGSPRICE);
+        GetVariationsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getVariationsRequest = new GetVariationsRequest();

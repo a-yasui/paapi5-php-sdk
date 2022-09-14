@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * DimensionBasedAttribute Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class DimensionBasedAttribute implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         'height' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\UnitBasedAttribute',
         'length' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\UnitBasedAttribute',
         'weight' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\UnitBasedAttribute',
-        'width' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\UnitBasedAttribute'
+        'width' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\UnitBasedAttribute',
     ];
 
     /**
@@ -59,7 +59,7 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         'height' => null,
         'length' => null,
         'weight' => null,
-        'width' => null
+        'width' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         'height' => 'Height',
         'length' => 'Length',
         'weight' => 'Weight',
-        'width' => 'Width'
+        'width' => 'Width',
     ];
 
     /**
@@ -104,7 +104,7 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         'height' => 'setHeight',
         'length' => 'setLength',
         'weight' => 'setWeight',
-        'width' => 'setWidth'
+        'width' => 'setWidth',
     ];
 
     /**
@@ -116,7 +116,7 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         'height' => 'getHeight',
         'length' => 'getLength',
         'weight' => 'getWeight',
-        'width' => 'getWidth'
+        'width' => 'getWidth',
     ];
 
     /**
@@ -160,9 +160,9 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['length'] = isset($data['length']) ? $data['length'] : null;
-        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
+        $this->container['height'] = $data['height'] ?? null;
+        $this->container['length'] = $data['length'] ?? null;
+        $this->container['weight'] = $data['weight'] ?? null;
+        $this->container['width'] = $data['width'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class DimensionBasedAttribute implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * GetBrowseNodesRequest Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -49,7 +49,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         'marketplace' => 'string',
         'partnerTag' => 'string',
         'partnerType' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\PartnerType',
-        'resources' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetBrowseNodesResource[]'
+        'resources' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetBrowseNodesResource[]',
     ];
 
     /**
@@ -63,7 +63,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         'marketplace' => null,
         'partnerTag' => null,
         'partnerType' => null,
-        'resources' => null
+        'resources' => null,
     ];
 
     /**
@@ -98,7 +98,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         'marketplace' => 'Marketplace',
         'partnerTag' => 'PartnerTag',
         'partnerType' => 'PartnerType',
-        'resources' => 'Resources'
+        'resources' => 'Resources',
     ];
 
     /**
@@ -112,7 +112,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         'marketplace' => 'setMarketplace',
         'partnerTag' => 'setPartnerTag',
         'partnerType' => 'setPartnerType',
-        'resources' => 'setResources'
+        'resources' => 'setResources',
     ];
 
     /**
@@ -126,7 +126,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         'marketplace' => 'getMarketplace',
         'partnerTag' => 'getPartnerTag',
         'partnerType' => 'getPartnerType',
-        'resources' => 'getResources'
+        'resources' => 'getResources',
     ];
 
     /**
@@ -170,9 +170,9 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -189,12 +189,12 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['browseNodeIds'] = isset($data['browseNodeIds']) ? $data['browseNodeIds'] : null;
-        $this->container['languagesOfPreference'] = isset($data['languagesOfPreference']) ? $data['languagesOfPreference'] : null;
-        $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
-        $this->container['partnerTag'] = isset($data['partnerTag']) ? $data['partnerTag'] : null;
-        $this->container['partnerType'] = isset($data['partnerType']) ? $data['partnerType'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['browseNodeIds'] = $data['browseNodeIds'] ?? null;
+        $this->container['languagesOfPreference'] = $data['languagesOfPreference'] ?? null;
+        $this->container['marketplace'] = $data['marketplace'] ?? null;
+        $this->container['partnerTag'] = $data['partnerTag'] ?? null;
+        $this->container['partnerType'] = $data['partnerType'] ?? null;
+        $this->container['resources'] = $data['resources'] ?? null;
     }
 
     /**
@@ -394,7 +394,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -443,5 +443,3 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

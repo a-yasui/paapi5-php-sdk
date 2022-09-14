@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ManufactureInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ManufactureInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'itemPartNumber' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
         'model' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
-        'warranty' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute'
+        'warranty' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
     ];
 
     /**
@@ -57,7 +57,7 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'itemPartNumber' => null,
         'model' => null,
-        'warranty' => null
+        'warranty' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'itemPartNumber' => 'ItemPartNumber',
         'model' => 'Model',
-        'warranty' => 'Warranty'
+        'warranty' => 'Warranty',
     ];
 
     /**
@@ -100,7 +100,7 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
         'itemPartNumber' => 'setItemPartNumber',
         'model' => 'setModel',
-        'warranty' => 'setWarranty'
+        'warranty' => 'setWarranty',
     ];
 
     /**
@@ -111,7 +111,7 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
         'itemPartNumber' => 'getItemPartNumber',
         'model' => 'getModel',
-        'warranty' => 'getWarranty'
+        'warranty' => 'getWarranty',
     ];
 
     /**
@@ -155,9 +155,9 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['itemPartNumber'] = isset($data['itemPartNumber']) ? $data['itemPartNumber'] : null;
-        $this->container['model'] = isset($data['model']) ? $data['model'] : null;
-        $this->container['warranty'] = isset($data['warranty']) ? $data['warranty'] : null;
+        $this->container['itemPartNumber'] = $data['itemPartNumber'] ?? null;
+        $this->container['model'] = $data['model'] ?? null;
+        $this->container['warranty'] = $data['warranty'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class ManufactureInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -46,7 +46,7 @@ require_once(__DIR__ . '/vendor/autoload.php'); // change path as needed
  */
 function parseResponse($browseNodes)
 {
-    $mappedResponse = array();
+    $mappedResponse = [];
     foreach ($browseNodes as $browseNode) {
         $mappedResponse[$browseNode->getId()] = $browseNode;
     }
@@ -76,24 +76,26 @@ function getBrowseNodes()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Specify browseNode id(s)
-    $browseNodeIds = array("3040", "0", "3045");
+    $browseNodeIds = ["3040", "0", "3045"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/getbrowsenodes.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN);
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();
@@ -190,24 +192,26 @@ function getBrowseNodesWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Specify browseNode id(s)
-    $browseNodeIds = array("3040", "0", "3045");
+    $browseNodeIds = ["3040", "0", "3045"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/getbrowsenodes.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN);
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();
@@ -309,24 +313,26 @@ function getBrowseNodesAsync()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Specify browseNode id(s)
-    $browseNodeIds = array("3040", "0", "3045");
+    $browseNodeIds = ["3040", "0", "3045"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/getbrowsenodes.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN);
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();
@@ -434,24 +440,26 @@ function getBrowseNodesAsyncWithHttpInfo()
     $config->setRegion('us-east-1');
 
     $apiInstance = new DefaultApi(
-    /*
-     * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-     * This is optional, `GuzzleHttp\Client` will be used as default.
-     */
-        new GuzzleHttp\Client(), $config);
+        /*
+         * If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+         * This is optional, `GuzzleHttp\Client` will be used as default.
+         */
+        new GuzzleHttp\Client(),
+        $config
+    );
 
     # Request initialization
 
     # Specify browseNode id(s)
-    $browseNodeIds = array("3040", "0", "3045");
+    $browseNodeIds = ["3040", "0", "3045"];
 
     /*
      * Choose resources you want from GetItemsResource enum
      * For more details, refer: https://webservices.amazon.com/paapi5/documentation/getbrowsenodes.html#resources-parameter
      */
-    $resources = array(
+    $resources = [
         GetBrowseNodesResource::ANCESTOR,
-        GetBrowseNodesResource::CHILDREN);
+        GetBrowseNodesResource::CHILDREN, ];
 
     # Forming the request
     $getBrowseNodesRequest = new GetBrowseNodesRequest();

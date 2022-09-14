@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * TradeInPrice Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class TradeInPrice implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class TradeInPrice implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'amount' => 'float',
         'currency' => 'string',
-        'displayAmount' => 'string'
+        'displayAmount' => 'string',
     ];
 
     /**
@@ -57,7 +57,7 @@ class TradeInPrice implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'amount' => null,
         'currency' => null,
-        'displayAmount' => null
+        'displayAmount' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class TradeInPrice implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'amount' => 'Amount',
         'currency' => 'Currency',
-        'displayAmount' => 'DisplayAmount'
+        'displayAmount' => 'DisplayAmount',
     ];
 
     /**
@@ -100,7 +100,7 @@ class TradeInPrice implements ModelInterface, ArrayAccess
     protected static $setters = [
         'amount' => 'setAmount',
         'currency' => 'setCurrency',
-        'displayAmount' => 'setDisplayAmount'
+        'displayAmount' => 'setDisplayAmount',
     ];
 
     /**
@@ -111,7 +111,7 @@ class TradeInPrice implements ModelInterface, ArrayAccess
     protected static $getters = [
         'amount' => 'getAmount',
         'currency' => 'getCurrency',
-        'displayAmount' => 'getDisplayAmount'
+        'displayAmount' => 'getDisplayAmount',
     ];
 
     /**
@@ -155,9 +155,9 @@ class TradeInPrice implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class TradeInPrice implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['displayAmount'] = isset($data['displayAmount']) ? $data['displayAmount'] : null;
+        $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['displayAmount'] = $data['displayAmount'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class TradeInPrice implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class TradeInPrice implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

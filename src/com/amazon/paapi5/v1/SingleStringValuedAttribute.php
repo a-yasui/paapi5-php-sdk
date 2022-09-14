@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * SingleStringValuedAttribute Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'displayValue' => 'string',
         'label' => 'string',
-        'locale' => 'string'
+        'locale' => 'string',
     ];
 
     /**
@@ -57,7 +57,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'displayValue' => null,
         'label' => null,
-        'locale' => null
+        'locale' => null,
     ];
 
     /**
@@ -89,7 +89,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'displayValue' => 'DisplayValue',
         'label' => 'Label',
-        'locale' => 'Locale'
+        'locale' => 'Locale',
     ];
 
     /**
@@ -100,7 +100,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
     protected static $setters = [
         'displayValue' => 'setDisplayValue',
         'label' => 'setLabel',
-        'locale' => 'setLocale'
+        'locale' => 'setLocale',
     ];
 
     /**
@@ -111,7 +111,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
     protected static $getters = [
         'displayValue' => 'getDisplayValue',
         'label' => 'getLabel',
-        'locale' => 'getLocale'
+        'locale' => 'getLocale',
     ];
 
     /**
@@ -155,9 +155,9 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayValue'] = isset($data['displayValue']) ? $data['displayValue'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
+        $this->container['displayValue'] = $data['displayValue'] ?? null;
+        $this->container['label'] = $data['label'] ?? null;
+        $this->container['locale'] = $data['locale'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

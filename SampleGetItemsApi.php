@@ -95,7 +95,7 @@ function getItems()
      */
     $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE];
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();
@@ -221,7 +221,7 @@ function getItemsWithHttpInfo()
      */
     $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE];
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();
@@ -350,7 +350,7 @@ function getItemsAsync()
      */
     $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE];
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();
@@ -485,7 +485,7 @@ function getItemsAsyncWithHttpInfo()
      */
     $resources = [
         GetItemsResource::ITEM_INFOTITLE,
-        GetItemsResource::OFFERSLISTINGSPRICE];
+        GetItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $getItemsRequest = new GetItemsRequest();

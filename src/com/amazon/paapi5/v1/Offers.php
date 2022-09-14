@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Offers Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class Offers implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class Offers implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'listings' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferListing[]',
-        'summaries' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSummary[]'
+        'summaries' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSummary[]',
     ];
 
     /**
@@ -55,7 +55,7 @@ class Offers implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'listings' => null,
-        'summaries' => null
+        'summaries' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class Offers implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'listings' => 'Listings',
-        'summaries' => 'Summaries'
+        'summaries' => 'Summaries',
     ];
 
     /**
@@ -96,7 +96,7 @@ class Offers implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'listings' => 'setListings',
-        'summaries' => 'setSummaries'
+        'summaries' => 'setSummaries',
     ];
 
     /**
@@ -106,7 +106,7 @@ class Offers implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'listings' => 'getListings',
-        'summaries' => 'getSummaries'
+        'summaries' => 'getSummaries',
     ];
 
     /**
@@ -150,9 +150,9 @@ class Offers implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class Offers implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['listings'] = isset($data['listings']) ? $data['listings'] : null;
-        $this->container['summaries'] = isset($data['summaries']) ? $data['summaries'] : null;
+        $this->container['listings'] = $data['listings'] ?? null;
+        $this->container['summaries'] = $data['summaries'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class Offers implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class Offers implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

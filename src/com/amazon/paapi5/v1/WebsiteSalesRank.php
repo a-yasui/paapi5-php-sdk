@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * WebsiteSalesRank Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class WebsiteSalesRank implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         'contextFreeName' => 'string',
         'displayName' => 'string',
         'id' => 'string',
-        'salesRank' => 'int'
+        'salesRank' => 'int',
     ];
 
     /**
@@ -59,7 +59,7 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         'contextFreeName' => null,
         'displayName' => null,
         'id' => null,
-        'salesRank' => 'int64'
+        'salesRank' => 'int64',
     ];
 
     /**
@@ -92,7 +92,7 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         'contextFreeName' => 'ContextFreeName',
         'displayName' => 'DisplayName',
         'id' => 'Id',
-        'salesRank' => 'SalesRank'
+        'salesRank' => 'SalesRank',
     ];
 
     /**
@@ -104,7 +104,7 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         'contextFreeName' => 'setContextFreeName',
         'displayName' => 'setDisplayName',
         'id' => 'setId',
-        'salesRank' => 'setSalesRank'
+        'salesRank' => 'setSalesRank',
     ];
 
     /**
@@ -116,7 +116,7 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         'contextFreeName' => 'getContextFreeName',
         'displayName' => 'getDisplayName',
         'id' => 'getId',
-        'salesRank' => 'getSalesRank'
+        'salesRank' => 'getSalesRank',
     ];
 
     /**
@@ -160,9 +160,9 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['contextFreeName'] = isset($data['contextFreeName']) ? $data['contextFreeName'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['salesRank'] = isset($data['salesRank']) ? $data['salesRank'] : null;
+        $this->container['contextFreeName'] = $data['contextFreeName'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['salesRank'] = $data['salesRank'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class WebsiteSalesRank implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

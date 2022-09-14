@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * TechnicalInfo Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class TechnicalInfo implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'energyEfficiencyClass' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
-        'formats' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute'
+        'formats' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute',
     ];
 
     /**
@@ -55,7 +55,7 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'energyEfficiencyClass' => null,
-        'formats' => null
+        'formats' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'energyEfficiencyClass' => 'EnergyEfficiencyClass',
-        'formats' => 'Formats'
+        'formats' => 'Formats',
     ];
 
     /**
@@ -96,7 +96,7 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'energyEfficiencyClass' => 'setEnergyEfficiencyClass',
-        'formats' => 'setFormats'
+        'formats' => 'setFormats',
     ];
 
     /**
@@ -106,7 +106,7 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'energyEfficiencyClass' => 'getEnergyEfficiencyClass',
-        'formats' => 'getFormats'
+        'formats' => 'getFormats',
     ];
 
     /**
@@ -150,9 +150,9 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['energyEfficiencyClass'] = isset($data['energyEfficiencyClass']) ? $data['energyEfficiencyClass'] : null;
-        $this->container['formats'] = isset($data['formats']) ? $data['formats'] : null;
+        $this->container['energyEfficiencyClass'] = $data['energyEfficiencyClass'] ?? null;
+        $this->container['formats'] = $data['formats'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class TechnicalInfo implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

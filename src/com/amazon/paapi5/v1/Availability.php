@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Availability Class Doc Comment
@@ -30,9 +31,9 @@ class Availability
     /**
      * Possible values of this enum
      */
-    const AVAILABLE = 'Available';
-    const INCLUDE_OUT_OF_STOCK = 'IncludeOutOfStock';
-    
+    public const AVAILABLE = 'Available';
+    public const INCLUDE_OUT_OF_STOCK = 'IncludeOutOfStock';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -45,5 +46,3 @@ class Availability
         ];
     }
 }
-
-

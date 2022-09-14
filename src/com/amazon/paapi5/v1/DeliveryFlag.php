@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * DeliveryFlag Class Doc Comment
@@ -30,11 +31,11 @@ class DeliveryFlag
     /**
      * Possible values of this enum
      */
-    const AMAZON_GLOBAL = 'AmazonGlobal';
-    const FREE_SHIPPING = 'FreeShipping';
-    const FULFILLED_BY_AMAZON = 'FulfilledByAmazon';
-    const PRIME = 'Prime';
-    
+    public const AMAZON_GLOBAL = 'AmazonGlobal';
+    public const FREE_SHIPPING = 'FreeShipping';
+    public const FULFILLED_BY_AMAZON = 'FulfilledByAmazon';
+    public const PRIME = 'Prime';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -49,5 +50,3 @@ class DeliveryFlag
         ];
     }
 }
-
-

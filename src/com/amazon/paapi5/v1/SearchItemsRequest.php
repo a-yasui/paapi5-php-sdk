@@ -17,8 +17,9 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ReturnTypeWillChange;
 
 /**
  * SearchItemsRequest Class Doc Comment
@@ -29,20 +30,20 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class SearchItemsRequest implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'SearchItemsRequest';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'actor' => 'string',
         'artist' => 'string',
@@ -70,14 +71,14 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         'resources' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SearchItemsResource[]',
         'searchIndex' => 'string',
         'sortBy' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SortBy',
-        'title' => 'string'
+        'title' => 'string',
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'actor' => null,
         'artist' => null,
@@ -105,7 +106,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         'resources' => null,
         'searchIndex' => null,
         'sortBy' => null,
-        'title' => null
+        'title' => null,
     ];
 
     /**
@@ -161,7 +162,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         'resources' => 'Resources',
         'searchIndex' => 'SearchIndex',
         'sortBy' => 'SortBy',
-        'title' => 'Title'
+        'title' => 'Title',
     ];
 
     /**
@@ -196,7 +197,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         'resources' => 'setResources',
         'searchIndex' => 'setSearchIndex',
         'sortBy' => 'setSortBy',
-        'title' => 'setTitle'
+        'title' => 'setTitle',
     ];
 
     /**
@@ -231,7 +232,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         'resources' => 'getResources',
         'searchIndex' => 'getSearchIndex',
         'sortBy' => 'getSortBy',
-        'title' => 'getTitle'
+        'title' => 'getTitle',
     ];
 
     /**
@@ -275,9 +276,6 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -294,33 +292,33 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['actor'] = isset($data['actor']) ? $data['actor'] : null;
-        $this->container['artist'] = isset($data['artist']) ? $data['artist'] : null;
-        $this->container['author'] = isset($data['author']) ? $data['author'] : null;
-        $this->container['availability'] = isset($data['availability']) ? $data['availability'] : null;
-        $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
-        $this->container['browseNodeId'] = isset($data['browseNodeId']) ? $data['browseNodeId'] : null;
-        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
-        $this->container['currencyOfPreference'] = isset($data['currencyOfPreference']) ? $data['currencyOfPreference'] : null;
-        $this->container['deliveryFlags'] = isset($data['deliveryFlags']) ? $data['deliveryFlags'] : null;
-        $this->container['itemCount'] = isset($data['itemCount']) ? $data['itemCount'] : null;
-        $this->container['itemPage'] = isset($data['itemPage']) ? $data['itemPage'] : null;
-        $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
-        $this->container['languagesOfPreference'] = isset($data['languagesOfPreference']) ? $data['languagesOfPreference'] : null;
-        $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
-        $this->container['maxPrice'] = isset($data['maxPrice']) ? $data['maxPrice'] : null;
-        $this->container['merchant'] = isset($data['merchant']) ? $data['merchant'] : null;
-        $this->container['minPrice'] = isset($data['minPrice']) ? $data['minPrice'] : null;
-        $this->container['minReviewsRating'] = isset($data['minReviewsRating']) ? $data['minReviewsRating'] : null;
-        $this->container['minSavingPercent'] = isset($data['minSavingPercent']) ? $data['minSavingPercent'] : null;
-        $this->container['offerCount'] = isset($data['offerCount']) ? $data['offerCount'] : null;
-        $this->container['partnerTag'] = isset($data['partnerTag']) ? $data['partnerTag'] : null;
-        $this->container['partnerType'] = isset($data['partnerType']) ? $data['partnerType'] : null;
-        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
-        $this->container['searchIndex'] = isset($data['searchIndex']) ? $data['searchIndex'] : null;
-        $this->container['sortBy'] = isset($data['sortBy']) ? $data['sortBy'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['actor'] = $data['actor'] ?? null;
+        $this->container['artist'] = $data['artist'] ?? null;
+        $this->container['author'] = $data['author'] ?? null;
+        $this->container['availability'] = $data['availability'] ?? null;
+        $this->container['brand'] = $data['brand'] ?? null;
+        $this->container['browseNodeId'] = $data['browseNodeId'] ?? null;
+        $this->container['condition'] = $data['condition'] ?? null;
+        $this->container['currencyOfPreference'] = $data['currencyOfPreference'] ?? null;
+        $this->container['deliveryFlags'] = $data['deliveryFlags'] ?? null;
+        $this->container['itemCount'] = $data['itemCount'] ?? null;
+        $this->container['itemPage'] = $data['itemPage'] ?? null;
+        $this->container['keywords'] = $data['keywords'] ?? null;
+        $this->container['languagesOfPreference'] = $data['languagesOfPreference'] ?? null;
+        $this->container['marketplace'] = $data['marketplace'] ?? null;
+        $this->container['maxPrice'] = $data['maxPrice'] ?? null;
+        $this->container['merchant'] = $data['merchant'] ?? null;
+        $this->container['minPrice'] = $data['minPrice'] ?? null;
+        $this->container['minReviewsRating'] = $data['minReviewsRating'] ?? null;
+        $this->container['minSavingPercent'] = $data['minSavingPercent'] ?? null;
+        $this->container['offerCount'] = $data['offerCount'] ?? null;
+        $this->container['partnerTag'] = $data['partnerTag'] ?? null;
+        $this->container['partnerType'] = $data['partnerType'] ?? null;
+        $this->container['properties'] = $data['properties'] ?? null;
+        $this->container['resources'] = $data['resources'] ?? null;
+        $this->container['searchIndex'] = $data['searchIndex'] ?? null;
+        $this->container['sortBy'] = $data['sortBy'] ?? null;
+        $this->container['title'] = $data['title'] ?? null;
     }
 
     /**
@@ -1000,6 +998,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -1007,6 +1006,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1019,19 +1019,21 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[ReturnTypeWillChange]
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
      * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param mixed $value Value to be set
      *
      * @return void
      */
+    #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1048,6 +1050,7 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -1070,5 +1073,3 @@ class SearchItemsRequest implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

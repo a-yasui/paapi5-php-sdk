@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Images Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class Images implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class Images implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'primary' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageType',
-        'variants' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageType[]'
+        'variants' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ImageType[]',
     ];
 
     /**
@@ -55,7 +55,7 @@ class Images implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'primary' => null,
-        'variants' => null
+        'variants' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class Images implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'primary' => 'Primary',
-        'variants' => 'Variants'
+        'variants' => 'Variants',
     ];
 
     /**
@@ -96,7 +96,7 @@ class Images implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'primary' => 'setPrimary',
-        'variants' => 'setVariants'
+        'variants' => 'setVariants',
     ];
 
     /**
@@ -106,7 +106,7 @@ class Images implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'primary' => 'getPrimary',
-        'variants' => 'getVariants'
+        'variants' => 'getVariants',
     ];
 
     /**
@@ -150,9 +150,9 @@ class Images implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class Images implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
-        $this->container['variants'] = isset($data['variants']) ? $data['variants'] : null;
+        $this->container['primary'] = $data['primary'] ?? null;
+        $this->container['variants'] = $data['variants'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class Images implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class Images implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

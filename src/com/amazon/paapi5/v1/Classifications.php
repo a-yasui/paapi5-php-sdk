@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * Classifications Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class Classifications implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class Classifications implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'binding' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
-        'productGroup' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute'
+        'productGroup' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute',
     ];
 
     /**
@@ -55,7 +55,7 @@ class Classifications implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'binding' => null,
-        'productGroup' => null
+        'productGroup' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class Classifications implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'binding' => 'Binding',
-        'productGroup' => 'ProductGroup'
+        'productGroup' => 'ProductGroup',
     ];
 
     /**
@@ -96,7 +96,7 @@ class Classifications implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'binding' => 'setBinding',
-        'productGroup' => 'setProductGroup'
+        'productGroup' => 'setProductGroup',
     ];
 
     /**
@@ -106,7 +106,7 @@ class Classifications implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'binding' => 'getBinding',
-        'productGroup' => 'getProductGroup'
+        'productGroup' => 'getProductGroup',
     ];
 
     /**
@@ -150,9 +150,9 @@ class Classifications implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class Classifications implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['binding'] = isset($data['binding']) ? $data['binding'] : null;
-        $this->container['productGroup'] = isset($data['productGroup']) ? $data['productGroup'] : null;
+        $this->container['binding'] = $data['binding'] ?? null;
+        $this->container['productGroup'] = $data['productGroup'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class Classifications implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class Classifications implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

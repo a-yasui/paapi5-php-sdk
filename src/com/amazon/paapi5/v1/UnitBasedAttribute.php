@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * UnitBasedAttribute Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class UnitBasedAttribute implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -47,7 +47,7 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         'displayValue' => 'float',
         'label' => 'string',
         'locale' => 'string',
-        'unit' => 'string'
+        'unit' => 'string',
     ];
 
     /**
@@ -59,7 +59,7 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         'displayValue' => null,
         'label' => null,
         'locale' => null,
-        'unit' => null
+        'unit' => null,
     ];
 
     /**
@@ -92,7 +92,7 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         'displayValue' => 'DisplayValue',
         'label' => 'Label',
         'locale' => 'Locale',
-        'unit' => 'Unit'
+        'unit' => 'Unit',
     ];
 
     /**
@@ -104,7 +104,7 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         'displayValue' => 'setDisplayValue',
         'label' => 'setLabel',
         'locale' => 'setLocale',
-        'unit' => 'setUnit'
+        'unit' => 'setUnit',
     ];
 
     /**
@@ -116,7 +116,7 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         'displayValue' => 'getDisplayValue',
         'label' => 'getLabel',
         'locale' => 'getLocale',
-        'unit' => 'getUnit'
+        'unit' => 'getUnit',
     ];
 
     /**
@@ -160,9 +160,9 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -179,10 +179,10 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayValue'] = isset($data['displayValue']) ? $data['displayValue'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
+        $this->container['displayValue'] = $data['displayValue'] ?? null;
+        $this->container['label'] = $data['label'] ?? null;
+        $this->container['locale'] = $data['locale'] ?? null;
+        $this->container['unit'] = $data['unit'] ?? null;
     }
 
     /**
@@ -325,7 +325,7 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -374,5 +374,3 @@ class UnitBasedAttribute implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

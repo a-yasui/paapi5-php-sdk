@@ -91,7 +91,7 @@ function searchItems()
      */
     $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE];
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();
@@ -223,7 +223,7 @@ function searchItemsWithHttpInfo()
      */
     $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE];
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();
@@ -359,7 +359,7 @@ function searchItemsAsync()
      */
     $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE];
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();
@@ -501,7 +501,7 @@ function searchItemsAsyncWithHttpInfo()
      */
     $resources = [
         SearchItemsResource::ITEM_INFOTITLE,
-        SearchItemsResource::OFFERSLISTINGSPRICE];
+        SearchItemsResource::OFFERSLISTINGSPRICE, ];
 
     # Forming the request
     $searchItemsRequest = new SearchItemsRequest();

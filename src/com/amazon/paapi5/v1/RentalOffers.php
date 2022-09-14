@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * RentalOffers Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class RentalOffers implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -44,7 +44,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'listings' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\RentalOfferListing[]'
+        'listings' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\RentalOfferListing[]',
     ];
 
     /**
@@ -53,7 +53,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'listings' => null
+        'listings' => null,
     ];
 
     /**
@@ -83,7 +83,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'listings' => 'Listings'
+        'listings' => 'Listings',
     ];
 
     /**
@@ -92,7 +92,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'listings' => 'setListings'
+        'listings' => 'setListings',
     ];
 
     /**
@@ -101,7 +101,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'listings' => 'getListings'
+        'listings' => 'getListings',
     ];
 
     /**
@@ -145,9 +145,9 @@ class RentalOffers implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -164,7 +164,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['listings'] = isset($data['listings']) ? $data['listings'] : null;
+        $this->container['listings'] = $data['listings'] ?? null;
     }
 
     /**
@@ -235,7 +235,7 @@ class RentalOffers implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -284,5 +284,3 @@ class RentalOffers implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

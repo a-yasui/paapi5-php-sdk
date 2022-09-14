@@ -87,7 +87,7 @@ class DefaultApi
      */
     public function getBrowseNodes($getBrowseNodesRequest)
     {
-        list($response) = $this->getBrowseNodesWithHttpInfo($getBrowseNodesRequest);
+        [$response] = $this->getBrowseNodesWithHttpInfo($getBrowseNodesRequest);
         return $response;
     }
 
@@ -146,9 +146,8 @@ class DefaultApi
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
             ];
-
         } catch (ApiException $e) {
             $responseBody = json_decode($e->getResponseBody());
             switch ($e->getCode()) {
@@ -208,7 +207,7 @@ class DefaultApi
     /**
      * Operation getBrowseNodesAsync
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetBrowseNodesRequest $getBrowseNodesRequest GetBrowseNodesRequest (required)
      *
@@ -228,7 +227,7 @@ class DefaultApi
     /**
      * Operation getBrowseNodesAsyncWithHttpInfo
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetBrowseNodesRequest $getBrowseNodesRequest GetBrowseNodesRequest (required)
      *
@@ -257,7 +256,7 @@ class DefaultApi
                     return [
                         ObjectSerializer::deserialize($content, $returnType, []),
                         $response->getStatusCode(),
-                        $response->getHeaders()
+                        $response->getHeaders(),
                     ];
                 },
                 function (RequestException $exception) {
@@ -350,15 +349,13 @@ class DefaultApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $multipartContents[] = [
                         'name' => $formParamName,
-                        'contents' => $formParamValue
+                        'contents' => $formParamValue,
                     ];
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = Query::build($formParams);
@@ -399,7 +396,7 @@ class DefaultApi
      */
     public function getItems($getItemsRequest)
     {
-        list($response) = $this->getItemsWithHttpInfo($getItemsRequest);
+        [$response] = $this->getItemsWithHttpInfo($getItemsRequest);
         return $response;
     }
 
@@ -458,9 +455,8 @@ class DefaultApi
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
             ];
-
         } catch (ApiException $e) {
             $responseBody = json_decode($e->getResponseBody());
             switch ($e->getCode()) {
@@ -520,7 +516,7 @@ class DefaultApi
     /**
      * Operation getItemsAsync
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsRequest $getItemsRequest GetItemsRequest (required)
      *
@@ -540,7 +536,7 @@ class DefaultApi
     /**
      * Operation getItemsAsyncWithHttpInfo
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsRequest $getItemsRequest GetItemsRequest (required)
      *
@@ -569,7 +565,7 @@ class DefaultApi
                     return [
                         ObjectSerializer::deserialize($content, $returnType, []),
                         $response->getStatusCode(),
-                        $response->getHeaders()
+                        $response->getHeaders(),
                     ];
                 },
                 function (RequestException $exception) {
@@ -662,15 +658,13 @@ class DefaultApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $multipartContents[] = [
                         'name' => $formParamName,
-                        'contents' => $formParamValue
+                        'contents' => $formParamValue,
                     ];
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = Query::build($formParams);
@@ -711,7 +705,7 @@ class DefaultApi
      */
     public function getVariations($getVariationsRequest)
     {
-        list($response) = $this->getVariationsWithHttpInfo($getVariationsRequest);
+        [$response] = $this->getVariationsWithHttpInfo($getVariationsRequest);
         return $response;
     }
 
@@ -770,9 +764,8 @@ class DefaultApi
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
             ];
-
         } catch (ApiException $e) {
             $responseBody = json_decode($e->getResponseBody());
             switch ($e->getCode()) {
@@ -832,7 +825,7 @@ class DefaultApi
     /**
      * Operation getVariationsAsync
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetVariationsRequest $getVariationsRequest GetVariationsRequest (required)
      *
@@ -852,7 +845,7 @@ class DefaultApi
     /**
      * Operation getVariationsAsyncWithHttpInfo
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetVariationsRequest $getVariationsRequest GetVariationsRequest (required)
      *
@@ -881,7 +874,7 @@ class DefaultApi
                     return [
                         ObjectSerializer::deserialize($content, $returnType, []),
                         $response->getStatusCode(),
-                        $response->getHeaders()
+                        $response->getHeaders(),
                     ];
                 },
                 function (RequestException $exception) {
@@ -974,15 +967,13 @@ class DefaultApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $multipartContents[] = [
                         'name' => $formParamName,
-                        'contents' => $formParamValue
+                        'contents' => $formParamValue,
                     ];
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = Query::build($formParams);
@@ -1023,7 +1014,7 @@ class DefaultApi
      */
     public function searchItems($searchItemsRequest)
     {
-        list($response) = $this->searchItemsWithHttpInfo($searchItemsRequest);
+        [$response] = $this->searchItemsWithHttpInfo($searchItemsRequest);
         return $response;
     }
 
@@ -1082,9 +1073,8 @@ class DefaultApi
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
             ];
-
         } catch (ApiException $e) {
             $responseBody = json_decode($e->getResponseBody());
             switch ($e->getCode()) {
@@ -1144,7 +1134,7 @@ class DefaultApi
     /**
      * Operation searchItemsAsync
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SearchItemsRequest $searchItemsRequest SearchItemsRequest (required)
      *
@@ -1164,7 +1154,7 @@ class DefaultApi
     /**
      * Operation searchItemsAsyncWithHttpInfo
      *
-     * 
+     *
      *
      * @param  \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SearchItemsRequest $searchItemsRequest SearchItemsRequest (required)
      *
@@ -1193,7 +1183,7 @@ class DefaultApi
                     return [
                         ObjectSerializer::deserialize($content, $returnType, []),
                         $response->getStatusCode(),
-                        $response->getHeaders()
+                        $response->getHeaders(),
                     ];
                 },
                 function (RequestException $exception) {
@@ -1286,15 +1276,13 @@ class DefaultApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $multipartContents[] = [
                         'name' => $formParamName,
-                        'contents' => $formParamValue
+                        'contents' => $formParamValue,
                     ];
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = Query::build($formParams);

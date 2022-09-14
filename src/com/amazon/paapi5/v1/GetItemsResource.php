@@ -16,7 +16,8 @@
  */
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * GetItemsResource Class Doc Comment
@@ -30,66 +31,66 @@ class GetItemsResource
     /**
      * Possible values of this enum
      */
-    const BROWSE_NODE_INFOBROWSE_NODES = 'BrowseNodeInfo.BrowseNodes';
-    const BROWSE_NODE_INFOBROWSE_NODESANCESTOR = 'BrowseNodeInfo.BrowseNodes.Ancestor';
-    const BROWSE_NODE_INFOBROWSE_NODESSALES_RANK = 'BrowseNodeInfo.BrowseNodes.SalesRank';
-    const BROWSE_NODE_INFOWEBSITE_SALES_RANK = 'BrowseNodeInfo.WebsiteSalesRank';
-    const CUSTOMER_REVIEWSCOUNT = 'CustomerReviews.Count';
-    const CUSTOMER_REVIEWSSTAR_RATING = 'CustomerReviews.StarRating';
-    const IMAGESPRIMARYSMALL = 'Images.Primary.Small';
-    const IMAGESPRIMARYMEDIUM = 'Images.Primary.Medium';
-    const IMAGESPRIMARYLARGE = 'Images.Primary.Large';
-    const IMAGESVARIANTSSMALL = 'Images.Variants.Small';
-    const IMAGESVARIANTSMEDIUM = 'Images.Variants.Medium';
-    const IMAGESVARIANTSLARGE = 'Images.Variants.Large';
-    const ITEM_INFOBY_LINE_INFO = 'ItemInfo.ByLineInfo';
-    const ITEM_INFOCONTENT_INFO = 'ItemInfo.ContentInfo';
-    const ITEM_INFOCONTENT_RATING = 'ItemInfo.ContentRating';
-    const ITEM_INFOCLASSIFICATIONS = 'ItemInfo.Classifications';
-    const ITEM_INFOEXTERNAL_IDS = 'ItemInfo.ExternalIds';
-    const ITEM_INFOFEATURES = 'ItemInfo.Features';
-    const ITEM_INFOMANUFACTURE_INFO = 'ItemInfo.ManufactureInfo';
-    const ITEM_INFOPRODUCT_INFO = 'ItemInfo.ProductInfo';
-    const ITEM_INFOTECHNICAL_INFO = 'ItemInfo.TechnicalInfo';
-    const ITEM_INFOTITLE = 'ItemInfo.Title';
-    const ITEM_INFOTRADE_IN_INFO = 'ItemInfo.TradeInInfo';
-    const OFFERSLISTINGSAVAILABILITYMAX_ORDER_QUANTITY = 'Offers.Listings.Availability.MaxOrderQuantity';
-    const OFFERSLISTINGSAVAILABILITYMESSAGE = 'Offers.Listings.Availability.Message';
-    const OFFERSLISTINGSAVAILABILITYMIN_ORDER_QUANTITY = 'Offers.Listings.Availability.MinOrderQuantity';
-    const OFFERSLISTINGSAVAILABILITYTYPE = 'Offers.Listings.Availability.Type';
-    const OFFERSLISTINGSCONDITION = 'Offers.Listings.Condition';
-    const OFFERSLISTINGSCONDITIONCONDITION_NOTE = 'Offers.Listings.Condition.ConditionNote';
-    const OFFERSLISTINGSCONDITIONSUB_CONDITION = 'Offers.Listings.Condition.SubCondition';
-    const OFFERSLISTINGSDELIVERY_INFOIS_AMAZON_FULFILLED = 'Offers.Listings.DeliveryInfo.IsAmazonFulfilled';
-    const OFFERSLISTINGSDELIVERY_INFOIS_FREE_SHIPPING_ELIGIBLE = 'Offers.Listings.DeliveryInfo.IsFreeShippingEligible';
-    const OFFERSLISTINGSDELIVERY_INFOIS_PRIME_ELIGIBLE = 'Offers.Listings.DeliveryInfo.IsPrimeEligible';
-    const OFFERSLISTINGSDELIVERY_INFOSHIPPING_CHARGES = 'Offers.Listings.DeliveryInfo.ShippingCharges';
-    const OFFERSLISTINGSIS_BUY_BOX_WINNER = 'Offers.Listings.IsBuyBoxWinner';
-    const OFFERSLISTINGSLOYALTY_POINTSPOINTS = 'Offers.Listings.LoyaltyPoints.Points';
-    const OFFERSLISTINGSMERCHANT_INFO = 'Offers.Listings.MerchantInfo';
-    const OFFERSLISTINGSPRICE = 'Offers.Listings.Price';
-    const OFFERSLISTINGSPROGRAM_ELIGIBILITYIS_PRIME_EXCLUSIVE = 'Offers.Listings.ProgramEligibility.IsPrimeExclusive';
-    const OFFERSLISTINGSPROGRAM_ELIGIBILITYIS_PRIME_PANTRY = 'Offers.Listings.ProgramEligibility.IsPrimePantry';
-    const OFFERSLISTINGSPROMOTIONS = 'Offers.Listings.Promotions';
-    const OFFERSLISTINGSSAVING_BASIS = 'Offers.Listings.SavingBasis';
-    const OFFERSSUMMARIESHIGHEST_PRICE = 'Offers.Summaries.HighestPrice';
-    const OFFERSSUMMARIESLOWEST_PRICE = 'Offers.Summaries.LowestPrice';
-    const OFFERSSUMMARIESOFFER_COUNT = 'Offers.Summaries.OfferCount';
-    const PARENT_ASIN = 'ParentASIN';
-    const RENTAL_OFFERSLISTINGSAVAILABILITYMAX_ORDER_QUANTITY = 'RentalOffers.Listings.Availability.MaxOrderQuantity';
-    const RENTAL_OFFERSLISTINGSAVAILABILITYMESSAGE = 'RentalOffers.Listings.Availability.Message';
-    const RENTAL_OFFERSLISTINGSAVAILABILITYMIN_ORDER_QUANTITY = 'RentalOffers.Listings.Availability.MinOrderQuantity';
-    const RENTAL_OFFERSLISTINGSAVAILABILITYTYPE = 'RentalOffers.Listings.Availability.Type';
-    const RENTAL_OFFERSLISTINGSBASE_PRICE = 'RentalOffers.Listings.BasePrice';
-    const RENTAL_OFFERSLISTINGSCONDITION = 'RentalOffers.Listings.Condition';
-    const RENTAL_OFFERSLISTINGSCONDITIONCONDITION_NOTE = 'RentalOffers.Listings.Condition.ConditionNote';
-    const RENTAL_OFFERSLISTINGSCONDITIONSUB_CONDITION = 'RentalOffers.Listings.Condition.SubCondition';
-    const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_AMAZON_FULFILLED = 'RentalOffers.Listings.DeliveryInfo.IsAmazonFulfilled';
-    const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_FREE_SHIPPING_ELIGIBLE = 'RentalOffers.Listings.DeliveryInfo.IsFreeShippingEligible';
-    const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_PRIME_ELIGIBLE = 'RentalOffers.Listings.DeliveryInfo.IsPrimeEligible';
-    const RENTAL_OFFERSLISTINGSDELIVERY_INFOSHIPPING_CHARGES = 'RentalOffers.Listings.DeliveryInfo.ShippingCharges';
-    const RENTAL_OFFERSLISTINGSMERCHANT_INFO = 'RentalOffers.Listings.MerchantInfo';
-    
+    public const BROWSE_NODE_INFOBROWSE_NODES = 'BrowseNodeInfo.BrowseNodes';
+    public const BROWSE_NODE_INFOBROWSE_NODESANCESTOR = 'BrowseNodeInfo.BrowseNodes.Ancestor';
+    public const BROWSE_NODE_INFOBROWSE_NODESSALES_RANK = 'BrowseNodeInfo.BrowseNodes.SalesRank';
+    public const BROWSE_NODE_INFOWEBSITE_SALES_RANK = 'BrowseNodeInfo.WebsiteSalesRank';
+    public const CUSTOMER_REVIEWSCOUNT = 'CustomerReviews.Count';
+    public const CUSTOMER_REVIEWSSTAR_RATING = 'CustomerReviews.StarRating';
+    public const IMAGESPRIMARYSMALL = 'Images.Primary.Small';
+    public const IMAGESPRIMARYMEDIUM = 'Images.Primary.Medium';
+    public const IMAGESPRIMARYLARGE = 'Images.Primary.Large';
+    public const IMAGESVARIANTSSMALL = 'Images.Variants.Small';
+    public const IMAGESVARIANTSMEDIUM = 'Images.Variants.Medium';
+    public const IMAGESVARIANTSLARGE = 'Images.Variants.Large';
+    public const ITEM_INFOBY_LINE_INFO = 'ItemInfo.ByLineInfo';
+    public const ITEM_INFOCONTENT_INFO = 'ItemInfo.ContentInfo';
+    public const ITEM_INFOCONTENT_RATING = 'ItemInfo.ContentRating';
+    public const ITEM_INFOCLASSIFICATIONS = 'ItemInfo.Classifications';
+    public const ITEM_INFOEXTERNAL_IDS = 'ItemInfo.ExternalIds';
+    public const ITEM_INFOFEATURES = 'ItemInfo.Features';
+    public const ITEM_INFOMANUFACTURE_INFO = 'ItemInfo.ManufactureInfo';
+    public const ITEM_INFOPRODUCT_INFO = 'ItemInfo.ProductInfo';
+    public const ITEM_INFOTECHNICAL_INFO = 'ItemInfo.TechnicalInfo';
+    public const ITEM_INFOTITLE = 'ItemInfo.Title';
+    public const ITEM_INFOTRADE_IN_INFO = 'ItemInfo.TradeInInfo';
+    public const OFFERSLISTINGSAVAILABILITYMAX_ORDER_QUANTITY = 'Offers.Listings.Availability.MaxOrderQuantity';
+    public const OFFERSLISTINGSAVAILABILITYMESSAGE = 'Offers.Listings.Availability.Message';
+    public const OFFERSLISTINGSAVAILABILITYMIN_ORDER_QUANTITY = 'Offers.Listings.Availability.MinOrderQuantity';
+    public const OFFERSLISTINGSAVAILABILITYTYPE = 'Offers.Listings.Availability.Type';
+    public const OFFERSLISTINGSCONDITION = 'Offers.Listings.Condition';
+    public const OFFERSLISTINGSCONDITIONCONDITION_NOTE = 'Offers.Listings.Condition.ConditionNote';
+    public const OFFERSLISTINGSCONDITIONSUB_CONDITION = 'Offers.Listings.Condition.SubCondition';
+    public const OFFERSLISTINGSDELIVERY_INFOIS_AMAZON_FULFILLED = 'Offers.Listings.DeliveryInfo.IsAmazonFulfilled';
+    public const OFFERSLISTINGSDELIVERY_INFOIS_FREE_SHIPPING_ELIGIBLE = 'Offers.Listings.DeliveryInfo.IsFreeShippingEligible';
+    public const OFFERSLISTINGSDELIVERY_INFOIS_PRIME_ELIGIBLE = 'Offers.Listings.DeliveryInfo.IsPrimeEligible';
+    public const OFFERSLISTINGSDELIVERY_INFOSHIPPING_CHARGES = 'Offers.Listings.DeliveryInfo.ShippingCharges';
+    public const OFFERSLISTINGSIS_BUY_BOX_WINNER = 'Offers.Listings.IsBuyBoxWinner';
+    public const OFFERSLISTINGSLOYALTY_POINTSPOINTS = 'Offers.Listings.LoyaltyPoints.Points';
+    public const OFFERSLISTINGSMERCHANT_INFO = 'Offers.Listings.MerchantInfo';
+    public const OFFERSLISTINGSPRICE = 'Offers.Listings.Price';
+    public const OFFERSLISTINGSPROGRAM_ELIGIBILITYIS_PRIME_EXCLUSIVE = 'Offers.Listings.ProgramEligibility.IsPrimeExclusive';
+    public const OFFERSLISTINGSPROGRAM_ELIGIBILITYIS_PRIME_PANTRY = 'Offers.Listings.ProgramEligibility.IsPrimePantry';
+    public const OFFERSLISTINGSPROMOTIONS = 'Offers.Listings.Promotions';
+    public const OFFERSLISTINGSSAVING_BASIS = 'Offers.Listings.SavingBasis';
+    public const OFFERSSUMMARIESHIGHEST_PRICE = 'Offers.Summaries.HighestPrice';
+    public const OFFERSSUMMARIESLOWEST_PRICE = 'Offers.Summaries.LowestPrice';
+    public const OFFERSSUMMARIESOFFER_COUNT = 'Offers.Summaries.OfferCount';
+    public const PARENT_ASIN = 'ParentASIN';
+    public const RENTAL_OFFERSLISTINGSAVAILABILITYMAX_ORDER_QUANTITY = 'RentalOffers.Listings.Availability.MaxOrderQuantity';
+    public const RENTAL_OFFERSLISTINGSAVAILABILITYMESSAGE = 'RentalOffers.Listings.Availability.Message';
+    public const RENTAL_OFFERSLISTINGSAVAILABILITYMIN_ORDER_QUANTITY = 'RentalOffers.Listings.Availability.MinOrderQuantity';
+    public const RENTAL_OFFERSLISTINGSAVAILABILITYTYPE = 'RentalOffers.Listings.Availability.Type';
+    public const RENTAL_OFFERSLISTINGSBASE_PRICE = 'RentalOffers.Listings.BasePrice';
+    public const RENTAL_OFFERSLISTINGSCONDITION = 'RentalOffers.Listings.Condition';
+    public const RENTAL_OFFERSLISTINGSCONDITIONCONDITION_NOTE = 'RentalOffers.Listings.Condition.ConditionNote';
+    public const RENTAL_OFFERSLISTINGSCONDITIONSUB_CONDITION = 'RentalOffers.Listings.Condition.SubCondition';
+    public const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_AMAZON_FULFILLED = 'RentalOffers.Listings.DeliveryInfo.IsAmazonFulfilled';
+    public const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_FREE_SHIPPING_ELIGIBLE = 'RentalOffers.Listings.DeliveryInfo.IsFreeShippingEligible';
+    public const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_PRIME_ELIGIBLE = 'RentalOffers.Listings.DeliveryInfo.IsPrimeEligible';
+    public const RENTAL_OFFERSLISTINGSDELIVERY_INFOSHIPPING_CHARGES = 'RentalOffers.Listings.DeliveryInfo.ShippingCharges';
+    public const RENTAL_OFFERSLISTINGSMERCHANT_INFO = 'RentalOffers.Listings.MerchantInfo';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -159,5 +160,3 @@ class GetItemsResource
         ];
     }
 }
-
-

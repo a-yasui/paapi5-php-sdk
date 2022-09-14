@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * ImageSize Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class ImageSize implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -46,7 +46,7 @@ class ImageSize implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'uRL' => 'string',
         'height' => 'int',
-        'width' => 'int'
+        'width' => 'int',
     ];
 
     /**
@@ -57,7 +57,7 @@ class ImageSize implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'uRL' => null,
         'height' => 'int32',
-        'width' => 'int32'
+        'width' => 'int32',
     ];
 
     /**
@@ -89,7 +89,7 @@ class ImageSize implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'uRL' => 'URL',
         'height' => 'Height',
-        'width' => 'Width'
+        'width' => 'Width',
     ];
 
     /**
@@ -100,7 +100,7 @@ class ImageSize implements ModelInterface, ArrayAccess
     protected static $setters = [
         'uRL' => 'setURL',
         'height' => 'setHeight',
-        'width' => 'setWidth'
+        'width' => 'setWidth',
     ];
 
     /**
@@ -111,7 +111,7 @@ class ImageSize implements ModelInterface, ArrayAccess
     protected static $getters = [
         'uRL' => 'getURL',
         'height' => 'getHeight',
-        'width' => 'getWidth'
+        'width' => 'getWidth',
     ];
 
     /**
@@ -155,9 +155,9 @@ class ImageSize implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -174,9 +174,9 @@ class ImageSize implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['uRL'] = isset($data['uRL']) ? $data['uRL'] : null;
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
+        $this->container['uRL'] = $data['uRL'] ?? null;
+        $this->container['height'] = $data['height'] ?? null;
+        $this->container['width'] = $data['width'] ?? null;
     }
 
     /**
@@ -295,7 +295,7 @@ class ImageSize implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -344,5 +344,3 @@ class ImageSize implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -17,8 +17,8 @@
 
 namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
-use \ArrayAccess;
-use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ArrayAccess;
+use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
  * OfferConditionNote Class Doc Comment
@@ -29,7 +29,7 @@ use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
  */
 class OfferConditionNote implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -45,7 +45,7 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'locale' => 'string',
-        'value' => 'string'
+        'value' => 'string',
     ];
 
     /**
@@ -55,7 +55,7 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'locale' => null,
-        'value' => null
+        'value' => null,
     ];
 
     /**
@@ -86,7 +86,7 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'locale' => 'Locale',
-        'value' => 'Value'
+        'value' => 'Value',
     ];
 
     /**
@@ -96,7 +96,7 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'locale' => 'setLocale',
-        'value' => 'setValue'
+        'value' => 'setValue',
     ];
 
     /**
@@ -106,7 +106,7 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'locale' => 'getLocale',
-        'value' => 'getValue'
+        'value' => 'getValue',
     ];
 
     /**
@@ -150,9 +150,9 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -169,8 +169,8 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['locale'] = $data['locale'] ?? null;
+        $this->container['value'] = $data['value'] ?? null;
     }
 
     /**
@@ -265,7 +265,7 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -314,5 +314,3 @@ class OfferConditionNote implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
