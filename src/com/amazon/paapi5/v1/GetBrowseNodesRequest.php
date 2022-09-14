@@ -19,6 +19,7 @@ namespace Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1;
 
 use ArrayAccess;
 use Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
+use ReturnTypeWillChange;
 
 /**
  * GetBrowseNodesRequest Class Doc Comment
@@ -380,6 +381,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -392,6 +394,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->container[$offset] ?? null;
@@ -405,6 +408,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -421,6 +425,7 @@ class GetBrowseNodesRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
