@@ -1,5 +1,13 @@
 # Product Advertising API 5.0 SDK for PHP
 
+# !!! USE ORIGINAL !!!
+
+This repository existed for PHP 8.1.
+
+you have to use Original:: [https://packagist.org/packages/thewirecutter/paapi5-php-sdk](https://packagist.org/packages/thewirecutter/paapi5-php-sdk)
+
+----
+
 [![Version](https://img.shields.io/packagist/v/a-yasui/paapi5-php-sdk)](https://img.shields.io/packagist/v/a-yasui/paapi5-php-sdk)
 
 [![Total Downloads](https://img.shields.io/packagist/dt/a-yasui/paapi5-php-sdk.svg?style=flat)](https://packagist.org/packages/a-yasui/paapi5-php-sdk)
